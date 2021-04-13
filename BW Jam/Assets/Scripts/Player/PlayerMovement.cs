@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public bool lostUpMov;
     public bool lostRightMov;
 
+    bool lookingRight;
+
     // [HideInInspector] 
 
     void Update()
@@ -36,10 +38,26 @@ public class PlayerMovement : MonoBehaviour
                 movement.x = 0;
             }
         }
+
+        CheckFlip();
     }
 
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    void CheckFlip()
+    {
+        if(movement.x == 1 && !lookingRight)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+            lookingRight = true;
+        }
+        else if(movement.x == -1)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+            lookingRight = false;
+        }
     }
 }
