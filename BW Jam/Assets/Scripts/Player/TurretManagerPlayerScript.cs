@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretManagerPlayerScript : MonoBehaviour
 {
     public GameObject currentSpot;
+    GameObject curTurretPooled;
 
 
     void OnTriggerEnter2D(Collider2D col)
@@ -18,11 +19,9 @@ public class TurretManagerPlayerScript : MonoBehaviour
         }
         if(currentSpot != null)
         {
-            if(Input.GetButton("Fire1"))
+            if(Input.GetButton("Fire2"))
             {
-                GameObject turret1 = ObjectPooler.SharedInstance.GetPooledObject("Turret1");
-                turret1.transform.SetParent(currentSpot.transform);
-                currentSpot = null;
+                CreateTurret();
             }
         }
     }
@@ -38,17 +37,28 @@ public class TurretManagerPlayerScript : MonoBehaviour
         }
         if(currentSpot != null)
         {
-            if(Input.GetButton("Fire1"))
+            if(Input.GetButton("Fire2"))
             {
-                GameObject turret = ObjectPooler.SharedInstance.GetPooledObject("Turret1");
-                if (turret != null) {
-                    turret.transform.position = currentSpot.transform.position;
-                    turret.transform.rotation = currentSpot.transform.rotation;
-                    turret.SetActive(true);
-                    turret.transform.SetParent(currentSpot.transform);
-                    currentSpot = null;
-                }
+                CreateTurret();
             }
         }
     }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if(currentSpot != null)
+        {
+            currentSpot = null;            
+        }
+    }
+
+    void CreateTurret()
+    {
+        GameObject turret1 = ObjectPooler.SharedInstance.GetPooledObject("Turret1");
+        turret1.transform.position = currentSpot.transform.position;                
+        turret1.transform.SetParent(currentSpot.transform);
+        turret1.SetActive(true);
+        currentSpot = null;
+    }
+
 }
