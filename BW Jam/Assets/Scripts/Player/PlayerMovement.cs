@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Thanks Brackeys and david timms
+
+    public Animator anim;
     public float moveSpeed;
 
     public Rigidbody2D rb;
@@ -13,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool lostUpMov;
     public bool lostRightMov;
-
+    
     bool lookingRight;
 
     // [HideInInspector] 
@@ -39,6 +41,15 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        if(movement.x != 0 || movement.y != 0)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
+        
         CheckFlip();
     }
 
