@@ -33,7 +33,7 @@ public class MusicManager : MonoBehaviour
     IEnumerator WaitSecondsAudio()
     {
         ResumeAudio();
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1);
         instance = FMODUnity.RuntimeManager.CreateInstance(music);
         instance.start();
     }

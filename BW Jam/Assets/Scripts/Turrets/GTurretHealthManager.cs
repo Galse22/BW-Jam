@@ -2,61 +2,63 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GTurretHealthManager : MonoBehaviour
-{
+public class GTurretHealthManager : MonoBehaviour {
     [SerializeField] public TurretHPScriptableObject healthScriptableObject;
 
     public float baseTurretHealth = 1000;
     public float currentHealth = 1000;
     public float decreaserMultiplier;
+    float healthDivided;
+    public float valueToNX;
 
     bool gracePeriod;
 
-    void Start()
-    {
-        defineVariablesScriptableObject();
+    public Transform healthBar;
+
+    void Start () {
+        defineVariablesScriptableObject ();
     }
 
-    private void OnEnable() {
+    private void OnEnable () {
         gracePeriod = true;
-        Invoke("ungracePeriod", 0.2f);
-        defineVariablesScriptableObject();
+        Invoke ("ungracePeriod", 0.2f);
+        defineVariablesScriptableObject ();
     }
 
-    private void OnDisable() {
-        defineVariablesScriptableObject();
+    private void OnDisable () {
+        defineVariablesScriptableObject ();
     }
 
-    private void Update() {
-        if(!gracePeriod)
-        {
+    private void Update () {
+        if (!gracePeriod) {
             currentHealth = currentHealth - 1 * decreaserMultiplier * Time.deltaTime;
-            if(currentHealth <= 0)
-            {
+            ChangeHealthBar ();
+            if (currentHealth <= 0) {
                 this.gameObject.transform.parent = null;
-                this.gameObject.SetActive(false);
+                this.gameObject.SetActive (false);
             }
         }
     }
 
-    public void FixTurret()
-    {
+    public void FixTurret () {
         currentHealth = baseTurretHealth;
-        // update mini UI
+        ChangeHealthBar ();
     }
 
-    void ungracePeriod()
-    {
+    void ChangeHealthBar () {
+        healthDivided = currentHealth / baseTurretHealth;
+        healthBar.localScale = new Vector3 (healthDivided, 1);
+    }
+
+    void ungracePeriod () {
         gracePeriod = false;
     }
-    void redefineVariables()
-    {
+    void redefineVariables () {
         currentHealth = baseTurretHealth;
     }
-    void defineVariablesScriptableObject()
-    {
+    void defineVariablesScriptableObject () {
         baseTurretHealth = healthScriptableObject.baseTurretHealth;
-        decreaserMultiplier =  healthScriptableObject.decreaserMultiplier;
+        decreaserMultiplier = healthScriptableObject.decreaserMultiplier;
         currentHealth = baseTurretHealth;
     }
 }
