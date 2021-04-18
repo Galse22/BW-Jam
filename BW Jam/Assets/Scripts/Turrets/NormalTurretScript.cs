@@ -4,34 +4,49 @@ using UnityEngine;
 
 public class NormalTurretScript : MonoBehaviour {
     public Transform transformToChangeZ;
-    float angleEnemy;
-    Transform bestEnemy;
-    Vector2 directionAim;
-    Transform thisTransform;
+    public float timeBeforeShooting;
+    public float timeBtwChangeRotation;
+    public LayerMask enemyLayerMask;
+    public float turretCheckRadius;
 
-    void Start () {
-        thisTransform = GetComponent<Transform> ();
+    public float angleEnemy;
+    public Transform bestEnemy;
+    public Vector3 directionAim;
+    public Transform thisTransform;
+
+    public Transform[] enemyArray;
+
+    void OnEnable () {
         StartCoroutine ("shootCoroutine");
         StartCoroutine ("calcuateAngleCoroutine");
     }
 
     IEnumerator shootCoroutine () {
-        yield return new WaitForSeconds (timeBtwSpawn);
+        yield return new WaitForSeconds (timeBeforeShooting);
+        GetEnemy ();
         StartCoroutine ("shootCoroutine");
     }
 
     IEnumerator calcuateAngleCoroutine () {
-        yield return new WaitForSeconds (timeBtwSpawn);
+        yield return new WaitForSeconds (timeBtwChangeRotation);
         GetEnemy ();
         StartCoroutine ("calcuateAngleCoroutine");
     }
 
     void GetEnemy () {
-        bestEnemy = GetClosestEnemy ();
-        directionAim = (bestEnemy.position - thisTransform.position).normalized;
-        angleEnemy = Mathf.Atan2 (directionAim.y, directionAim.x) * Mathf.Rad2Deg - 90f;
-        if (angleEnemy < 0.0f) angleEnemy += 360.0f;
-        //transformToChangeZ
+        bestEnemy = null;
+        Collider2D[] enemyColArray = Physics2D.OverlapCircleAll (thisTransform.position, turretCheckRadius, enemyLayerMask);
+        enemyArray = new Transform[enemyColArray.Length];
+        for (int i = 0; i < enemyColArray.Length; i++) {
+            enemyArray[i] = enemyColArray[i].transform;
+        }
+        bestEnemy = GetClosestEnemy (enemyArray);
+        if (bestEnemy != null) {
+            directionAim = (bestEnemy.position - thisTransform.position);
+            angleEnemy = Mathf.Atan2 (directionAim.y, directionAim.x) * Mathf.Rad2Deg;
+            if (angleEnemy < 0.0f) angleEnemy += 360.0f;
+            transformToChangeZ.eulerAngles = new Vector3 (0, 0, angleEnemy);
+        }
     }
 
     Transform GetClosestEnemy (Transform[] enemies) {

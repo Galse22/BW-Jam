@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 8241804516971141932}
   - component: {fileID: 3883768642016594203}
   - component: {fileID: 384204602263608883}
+  - component: {fileID: 4441685304687378404}
   m_Layer: 0
   m_Name: Turret1
   m_TagString: Untagged
@@ -166,6 +167,28 @@ MonoBehaviour:
   decreaserMultiplier: 0
   valueToNX: 0.3461
   healthBar: {fileID: 3054674219723897351}
+--- !u!114 &4441685304687378404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2995546165483157081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee98c54cf5e99784ab8c14997c2737ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformToChangeZ: {fileID: 4706706947685605156}
+  timeBeforeShooting: 0.5
+  timeBtwChangeRotation: 0.05
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  turretCheckRadius: 5
+  bestEnemy: {fileID: 0}
+  thisTransform: {fileID: 8241804516971141932}
+  enemyArray: []
 --- !u!1 &3536991192961388571
 GameObject:
   m_ObjectHideFlags: 0
