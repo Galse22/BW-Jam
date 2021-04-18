@@ -6,7 +6,15 @@ public class TurretManagerPlayerScript : MonoBehaviour
 {
     public GameObject currentSpot;
     GameObject curTurretPooled;
+    public TurretUIScriptableObject turretUIScriptableObject;
+    public GCVarManager gCVarManager;
 
+    public string uiThingyNameToPool;
+    public float moneyThatCosts;
+
+    private void Update() {
+        ChangeScriptableObjects(turretUIScriptableObject);
+    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -19,10 +27,7 @@ public class TurretManagerPlayerScript : MonoBehaviour
         }
         if(currentSpot != null)
         {
-            if(Input.GetButton("Fire2"))
-            {
-                CreateTurret();
-            }
+            InputChecker();
         }
     }
 
@@ -37,10 +42,7 @@ public class TurretManagerPlayerScript : MonoBehaviour
         }
         if(currentSpot != null)
         {
-            if(Input.GetButton("Fire2"))
-            {
-                CreateTurret();
-            }
+            InputChecker();
         }
     }
 
@@ -52,13 +54,31 @@ public class TurretManagerPlayerScript : MonoBehaviour
         }
     }
 
+    void InputChecker()
+    {
+        if(Input.GetButton("Fire2"))
+        {
+            if(gCVarManager.CheckMoney(moneyThatCosts))
+            {
+                CreateTurret();
+            }
+        }
+    }
+
     void CreateTurret()
     {
-        GameObject turret1 = ObjectPooler.SharedInstance.GetPooledObject("Turret1");
+        GameObject turret1 = ObjectPooler.SharedInstance.GetPooledObject(uiThingyNameToPool);
         turret1.transform.position = currentSpot.transform.position;                
         turret1.transform.SetParent(currentSpot.transform);
         turret1.SetActive(true);
         currentSpot = null;
+    }
+
+    void ChangeScriptableObjects(TurretUIScriptableObject newTurretScritableObject)
+    {
+        turretUIScriptableObject = newTurretScritableObject;
+        uiThingyNameToPool = turretUIScriptableObject.uiThingyNameToPool;
+        moneyThatCosts = turretUIScriptableObject.moneyThatCosts;
     }
 
 }

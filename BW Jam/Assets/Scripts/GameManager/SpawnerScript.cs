@@ -78,6 +78,7 @@ public class SpawnerScript : MonoBehaviour
         enemyKills++;
         if(enemyKillsToChangeTime <= enemyKills)
         {
+            enemyKills = 0;
             DecreaseTimeBtwSpawnFunc();
         }
     }

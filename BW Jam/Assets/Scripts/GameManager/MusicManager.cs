@@ -7,23 +7,45 @@ public class MusicManager : MonoBehaviour
     [FMODUnity.EventRef]
     public string music = "event:/tower defence for FMOD ";
     // John's stuff
-
-    FMOD.Studio.EventInstance musicEv;
+    FMOD.Studio.EventInstance instance;
+    
 
     public int dangerMeter = 0;
+    bool audioResumed;
+    bool playerInput;
 
-
-    void Awake()
-    {
-        musicEv = FMODUnity.RuntimeManager.CreateInstance(music);
-
-        musicEv.start();
+    private void Update() {
+        if (playerInput == false && Input.anyKeyDown)
+        {
+            ResumeAudio();
+            StartCoroutine("WaitSecondsAudio");
+            playerInput = true;
+        }
     }
 
 
     // must call function somewhere
     public void CheckDanger()
     {
-        musicEv.setParameterByName("Danger", dangerMeter);
+        instance.setParameterByName("Danger", dangerMeter);
+    }
+
+    IEnumerator WaitSecondsAudio()
+    {
+        ResumeAudio();
+        yield return new WaitForSeconds(0.5f);
+        instance = FMODUnity.RuntimeManager.CreateInstance(music);
+        instance.start();
+    }
+
+    
+    public void ResumeAudio()
+    {
+        if (!audioResumed)
+        {
+            var result = FMODUnity.RuntimeManager.CoreSystem.mixerSuspend();
+            result = FMODUnity.RuntimeManager.CoreSystem.mixerResume();
+            audioResumed = true;
+        }
     }
 }

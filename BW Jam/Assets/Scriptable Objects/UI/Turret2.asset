@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5b8e4afad861dd44b9687dd73c324c2, type: 3}
-  m_Name: Turret1
+  m_Name: Turret2
   m_EditorClassIdentifier: 
-  uiThingyNameToPool: Turret1
-  moneyThatCosts: 100
+  uiThingyNameToPool: Turret2
+  moneyThatCosts: 200
