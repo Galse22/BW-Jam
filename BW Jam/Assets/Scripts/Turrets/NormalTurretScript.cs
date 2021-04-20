@@ -9,12 +9,11 @@ public class NormalTurretScript : MonoBehaviour {
     public LayerMask enemyLayerMask;
     public float turretCheckRadius;
 
-    public float angleEnemy;
-    public Transform bestEnemy;
-    public Vector3 directionAim;
+    float angleEnemy;
+    Transform bestEnemy;
+    Vector3 directionAim;
     public Transform thisTransform;
-
-    public Transform[] enemyArray;
+    public Transform transformToBeAimedAt;
 
     void OnEnable () {
         StartCoroutine ("shootCoroutine");
@@ -23,17 +22,18 @@ public class NormalTurretScript : MonoBehaviour {
 
     IEnumerator shootCoroutine () {
         yield return new WaitForSeconds (timeBeforeShooting);
-        GetEnemy ();
+        GetEnemy (true);
+        transformToBeAimedAt = null;
         StartCoroutine ("shootCoroutine");
     }
 
     IEnumerator calcuateAngleCoroutine () {
         yield return new WaitForSeconds (timeBtwChangeRotation);
-        GetEnemy ();
+        GetEnemy (false);
         StartCoroutine ("calcuateAngleCoroutine");
     }
 
-    void GetEnemy () {
+    void GetEnemy (bool shouldSetGo) {
         bestEnemy = null;
         Collider2D enemyColArray = Physics2D.OverlapCircle (thisTransform.position, turretCheckRadius, enemyLayerMask);
         if(enemyColArray != null)
@@ -43,10 +43,24 @@ public class NormalTurretScript : MonoBehaviour {
             angleEnemy = Mathf.Atan2 (directionAim.y, directionAim.x) * Mathf.Rad2Deg;
             if (angleEnemy < 0.0f) angleEnemy += 360.0f;
             transformToChangeZ.eulerAngles = new Vector3 (0, 0, angleEnemy);
+            if(shouldSetGo)
+            {
+                transformToBeAimedAt = bestEnemy;
+            }
         }
     }
 
-            // Collider2D[] enemyColArray = Physics2D.OverlapCircleAll (thisTransform.position, turretCheckRadius, enemyLayerMask);
+    void OnDrawGizmosSelected()
+    {
+        // IMPORTANT: REMOVE ON FINAL BUILD
+        // useful to balance radius
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(thisTransform.position, turretCheckRadius);
+    }
+
+        //     public Transform[] enemyArray;
+
+        // Collider2D[] enemyColArray = Physics2D.OverlapCircleAll (thisTransform.position, turretCheckRadius, enemyLayerMask);
         // enemyArray = new Transform[enemyColArray.Length];
         // for (int i = 0; i < enemyColArray.Length; i++) {
         //     enemyArray[i] = enemyColArray[i].transform;

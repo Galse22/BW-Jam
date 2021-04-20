@@ -48,9 +48,12 @@ public class TurretManagerPlayerScript : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D col)
     {
-        if(currentSpot != null)
+        if(col.gameObject.tag == "TurretSpot")
         {
-            currentSpot = null;            
+            if(currentSpot != null)
+            {
+                currentSpot = null;            
+            }
         }
     }
 

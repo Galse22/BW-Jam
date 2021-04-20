@@ -5,11 +5,10 @@ using UnityEngine;
 public class GTurretHealthManager : MonoBehaviour {
     [SerializeField] public TurretHPScriptableObject healthScriptableObject;
 
-    public float baseTurretHealth = 1000;
-    public float currentHealth = 1000;
-    public float decreaserMultiplier;
+    float baseTurretHealth = 1000;
+    float currentHealth = 1000;
+    float decreaserMultiplier;
     float healthDivided;
-    public float valueToNX;
 
     bool gracePeriod;
 

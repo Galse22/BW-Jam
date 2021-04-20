@@ -75,9 +75,10 @@ GameObject:
   - component: {fileID: 3883768642016594203}
   - component: {fileID: 384204602263608883}
   - component: {fileID: 4441685304687378404}
+  - component: {fileID: 5833379965570134608}
   m_Layer: 0
   m_Name: Turret1
-  m_TagString: Untagged
+  m_TagString: Turret1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,10 +163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthScriptableObject: {fileID: 11400000, guid: ef4483dde3491ee489ab4ae797bb8de3, type: 2}
-  baseTurretHealth: 0
-  currentHealth: 1000
-  decreaserMultiplier: 0
-  valueToNX: 0.3461
   healthBar: {fileID: 3054674219723897351}
 --- !u!114 &4441685304687378404
 MonoBehaviour:
@@ -180,15 +177,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transformToChangeZ: {fileID: 4706706947685605156}
-  timeBeforeShooting: 0.5
+  timeBeforeShooting: 3
   timeBtwChangeRotation: 0.05
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  turretCheckRadius: 5
-  bestEnemy: {fileID: 0}
+  turretCheckRadius: 7.6
   thisTransform: {fileID: 8241804516971141932}
-  enemyArray: []
+  transformToBeAimedAt: {fileID: 0}
+--- !u!61 &5833379965570134608
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2995546165483157081}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8, y: 0.8}
+    newSize: {x: 1.2, y: 1.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &3536991192961388571
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,7 +39,7 @@ MonoBehaviour:
   Path: Assets/FMOD Stuff/Tower defence/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637543471700000000
+  lastModified: 637544366460000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -110,7 +110,7 @@ MonoBehaviour:
   - {fileID: -4741938283706887028}
   StringsBanks:
   - {fileID: 163570874307484131}
-  stringsBankWriteTime: 637543471700000000
+  stringsBankWriteTime: 637544366460000000
   cacheVersion: 6
 --- !u!114 &163570874307484131
 MonoBehaviour:
@@ -127,7 +127,7 @@ MonoBehaviour:
   Path: Assets/FMOD Stuff/Tower defence/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637543471700000000
+  lastModified: 637544366460000000
   LoadResult: 0
   FileSizes:
   - Name: Tower defence
@@ -173,10 +173,30 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2061457236746735637}
+  - {fileID: 1070432020868362832}
   MinDistance: 0
   MaxDistance: 0
   Length: 152920
+--- !u!114 &1070432020868362832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/tower defence for FMOD /Danger
+  m_EditorClassIdentifier: 
+  Name: Danger
+  Min: 1
+  Max: 17
+  Default: 1
+  ID:
+    data1: 732490089
+    data2: 4002084888
+  Exists: 1
 --- !u!114 &1161680880461774333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,7 +255,7 @@ MonoBehaviour:
   ID:
     data1: 732490089
     data2: 4002084888
-  Exists: 1
+  Exists: 0
 --- !u!114 &3386231751388090646
 MonoBehaviour:
   m_ObjectHideFlags: 0

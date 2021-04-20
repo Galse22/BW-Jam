@@ -7,13 +7,127 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000214A84E1A58 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000025840188658 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff/Tower defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 00000258402B6708 : node = 00000258406E4D30
+[LOG] SystemI::createSound                     : add node to async list : head = 0000025840491308.  list count = 0
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff/Tower defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000258402BB658 : node = 00000258406E4AB0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000025840491308.  list count = 0
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff/Tower defence/Desktop/Master.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000258402B6708
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff/Tower defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6404992
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6048
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 00000258402BA218 : node = 00000258406E2F30
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000025840491308.  list count = 1
+[LOG] SystemI::createSound                     :     filename = Assets/FMOD Stuff/Tower defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000258406E4E40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 00000258402BB4A8 : node = 00000258406E3070
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000025840491308.  list count = 2
+[LOG] SystemI::createSound                     :     filename = Assets/FMOD Stuff/Tower defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 00000258402B57D8 : node = 00000258406E45B0
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000025840491308.  list count = 3
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tower defence for FMOD ', format=5, channels=2, frequency=48000, lengthbytes=1882368, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.794974.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 49152, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000258402B6708
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000258402BB658
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff/Tower defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6404992
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000258406E4BC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Danger guitar ', format=5, channels=2, frequency=48000, lengthbytes=351744, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.175947.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000258402BB658
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000258402BA218
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff/Tower defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6404992
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000258406E3040
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Danger hats', format=5, channels=2, frequency=48000, lengthbytes=656544, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.013018.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000258402BA218
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000258402BB4A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff/Tower defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6404992
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000258406E3180
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tower defence Quieter  (1)', format=5, channels=2, frequency=48000, lengthbytes=1884960, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562943.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000258402BB4A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000258402B57D8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff/Tower defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6404992
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000258406E46C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tower defence Danger layer 2', format=5, channels=2, frequency=48000, lengthbytes=1620352, lengthpcm=7238230, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.026404.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000258402B57D8
+[WRN] OutputWASAPI::mixerThread                : Starvation detected in WASAPI output buffer!
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000258402B8718
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000258402B8718
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000258402BA3C8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000258402BA3C8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000258402B8718
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000258402B8718
+[LOG] SoundI::release                          : tower defence Danger layer 2 (00000258402B57D8)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (0000025840703098)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (00000258402B6A68)
+[LOG] SoundI::release                          : tower defence Quieter  (1) (00000258402BB4A8)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (0000025840703D98)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (00000258402B88C8)
+[LOG] SoundI::release                          : Danger hats (00000258402BA218)
+[LOG] SoundI::release                          :     Danger hats (0000025840700CD8)
+[LOG] SoundI::release                          :     Danger hats (00000258402B8718)
+[LOG] SoundI::release                          : Danger guitar  (00000258402BB658)
+[LOG] SoundI::release                          :     Danger guitar  (00000258407038B8)
+[LOG] SoundI::release                          :     Danger guitar  (00000258402BA3C8)
+[LOG] SoundI::release                          : tower defence for FMOD  (00000258402B6708)
+[LOG] SoundI::release                          :     tower defence for FMOD  (0000025840700B38)
+[LOG] SoundI::release                          :     tower defence for FMOD  (00000258402BB808)
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -21,3 +135,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
