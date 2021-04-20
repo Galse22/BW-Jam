@@ -27,11 +27,21 @@ public class EnemyScript : MonoBehaviour
     public Material baseMaterial;
     public Material whiteMat;
 
-	// Use this for initialization
+    public float moneyToIncrease;
+
+    SpawnerScript spawnerScript;
+
+	private void Start() {
+        spawnerScript = GameObject.FindWithTag("GameController").GetComponent<SpawnerScript>();
+    }
 	private void OnEnable() {
         waypointIndex = 0;
         health = baseHealth;
         transform.position = waypoints[waypointIndex].transform.position;
+    }
+
+    private void OnDisable() {
+        ResetMaterial();
     }
 	
 	// Update is called once per frame
@@ -86,6 +96,7 @@ public class EnemyScript : MonoBehaviour
         }
         else
         {
+            spawnerScript.EnemyKilled(moneyToIncrease);
             this.gameObject.SetActive(false);
         }
     }

@@ -12,6 +12,8 @@ public class TurretManagerPlayerScript : MonoBehaviour
     public string uiThingyNameToPool;
     public float moneyThatCosts;
 
+    [HideInInspector] public bool lostArm;
+
     private void Update() {
         ChangeScriptableObjects(turretUIScriptableObject);
     }
@@ -59,7 +61,7 @@ public class TurretManagerPlayerScript : MonoBehaviour
 
     void InputChecker()
     {
-        if(Input.GetButton("Fire2"))
+        if(Input.GetButton("Fire2") && !lostArm)
         {
             if(gCVarManager.CheckMoney(moneyThatCosts))
             {

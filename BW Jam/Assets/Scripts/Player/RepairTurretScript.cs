@@ -15,6 +15,8 @@ public class RepairTurretScript : MonoBehaviour
     public float moneyTurret3;
     public float moneyTurret4;
 
+    [HideInInspector] public bool lostArm;
+
     public List<GameObject> repairedGOstList;
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -87,7 +89,7 @@ public class RepairTurretScript : MonoBehaviour
 
     void InputChecker()
     {
-        if(Input.GetKey("space"))
+        if(Input.GetKey("space") && !lostArm)
         {
             if(!repairedGOstList.Contains(currentSpot) && gCVarManager.CheckMoney(activeMoney))
             {

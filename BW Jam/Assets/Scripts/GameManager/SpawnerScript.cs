@@ -11,6 +11,8 @@ public class SpawnerScript : MonoBehaviour
     public float minimumTime;
     public float timeToDecrease;
 
+    public GCVarManager gCVarManager;
+
     public int enemyKillsToChangeTime;
     int enemyKills;
 
@@ -73,7 +75,7 @@ public class SpawnerScript : MonoBehaviour
         }
     }
 
-    public void EnemyKilled()
+    public void EnemyKilled(float moneyToIncrease)
     {
         enemyKills++;
         if(enemyKillsToChangeTime <= enemyKills)

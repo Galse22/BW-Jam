@@ -21,11 +21,12 @@ public class GTurretHealthManager : MonoBehaviour {
     private void OnEnable () {
         gracePeriod = true;
         Invoke ("ungracePeriod", 0.2f);
-        defineVariablesScriptableObject ();
+        redefineVariables ();
     }
 
     private void OnDisable () {
-        defineVariablesScriptableObject ();
+        redefineVariables ();
+        ChangeHealthBar ();
     }
 
     private void Update () {

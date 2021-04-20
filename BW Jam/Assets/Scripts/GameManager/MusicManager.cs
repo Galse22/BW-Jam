@@ -10,7 +10,7 @@ public class MusicManager : MonoBehaviour
     FMOD.Studio.EventInstance instance;
     
 
-    public int dangerMeter = 0;
+    public int dangerMeter = 1;
     bool audioResumed;
     bool playerInput;
 
@@ -25,8 +25,9 @@ public class MusicManager : MonoBehaviour
 
 
     // must call function somewhere
-    public void CheckDanger()
+    public void IncreaseDanger()
     {
+        dangerMeter++;
         instance.setParameterByName("Danger", dangerMeter);
     }
 

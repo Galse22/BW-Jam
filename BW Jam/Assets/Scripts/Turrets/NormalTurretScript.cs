@@ -14,6 +14,9 @@ public class NormalTurretScript : MonoBehaviour {
     Vector3 directionAim;
     public Transform thisTransform;
     public Transform transformToBeAimedAt;
+    public Transform firePlace;
+
+    public string bulletString;
 
     void OnEnable () {
         StartCoroutine ("shootCoroutine");
@@ -23,6 +26,15 @@ public class NormalTurretScript : MonoBehaviour {
     IEnumerator shootCoroutine () {
         yield return new WaitForSeconds (timeBeforeShooting);
         GetEnemy (true);
+        if(transformToBeAimedAt != null)
+        {
+            GameObject spawnedBullet = ObjectPooler.SharedInstance.GetPooledObject(bulletString);
+            spawnedBullet.transform.position =  firePlace.transform.position;
+            spawnedBullet.transform.rotation =  transformToChangeZ.rotation;
+            NormalBulletScript normalBulletScript = spawnedBullet.GetComponent<NormalBulletScript>();
+            normalBulletScript.targetPos = transformToBeAimedAt;
+            spawnedBullet.SetActive(true);
+        }
         transformToBeAimedAt = null;
         StartCoroutine ("shootCoroutine");
     }
