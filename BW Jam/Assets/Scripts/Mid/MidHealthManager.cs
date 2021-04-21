@@ -8,10 +8,17 @@ public class MidHealthManager : MonoBehaviour
 
     public int dmgType;
     public MidDamageScript midDamageScript;
+
+    Animator anim;
+
+    private void Start() {
+        anim = GetComponent<Animator>();
+    }
     private void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.tag == "Enemy") {
             col.gameObject.SetActive(false);
             health--;
+            anim.SetTrigger("lostHealth");
             if(health == 0 || health == -1 || health == -2)
             {
                 midDamageScript.MidTakeDamage(dmgType);

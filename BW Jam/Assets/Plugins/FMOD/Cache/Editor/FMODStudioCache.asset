@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7549707630254439673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapon Fire Large
+  m_EditorClassIdentifier: 
+  Path: event:/Weapon Fire Large
+  guid: af336e590c3a6c44bf4923af91be60f6
+  Banks:
+  - {fileID: 6089249433495678460}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 656
 --- !u!114 &-7282084133549302574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,6 +66,26 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-3951026123701340216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/tower defence for FMOD /Danger
+  m_EditorClassIdentifier: 
+  Name: Danger
+  Min: 1
+  Max: 17
+  Default: 1
+  ID:
+    data1: 732490089
+    data2: 4002084888
+  Exists: 1
 --- !u!114 &-3681563703105487669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +107,75 @@ MonoBehaviour:
   - Name: Tower defence
     Value: 808
   Exists: 1
+--- !u!114 &-3063323939922617275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Explosion Large
+  m_EditorClassIdentifier: 
+  Path: event:/Explosion Large
+  guid: 4cd81d8c62fd22488c884fc9ef1afbf7
+  Banks:
+  - {fileID: 6089249433495678460}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1093
+--- !u!114 &-2968031840350199134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemy Death
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy Death
+  guid: eaa81a79820a9f45bdb6ed2b6e2565a2
+  Banks:
+  - {fileID: 6089249433495678460}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 375
+--- !u!114 &-2668940522272275084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapon Fire Small
+  m_EditorClassIdentifier: 
+  Path: event:/Weapon Fire Small
+  guid: 535f740f6e671a428caf500a91cc9e8d
+  Banks:
+  - {fileID: 6089249433495678460}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 343
 --- !u!114 &-1126606473881744578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,16 +213,22 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 163570874307484131}
-  - {fileID: -4741938283706887028}
+  - {fileID: 4155434990498667401}
+  - {fileID: 6089249433495678460}
   EditorEvents:
-  - {fileID: 1040140799908932016}
+  - {fileID: 6397632318882576706}
+  - {fileID: -3063323939922617275}
+  - {fileID: -2668940522272275084}
+  - {fileID: -7549707630254439673}
+  - {fileID: 4218488646629307535}
+  - {fileID: 9119750111962945617}
+  - {fileID: -2968031840350199134}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4741938283706887028}
+  - {fileID: 6089249433495678460}
   StringsBanks:
-  - {fileID: 163570874307484131}
-  stringsBankWriteTime: 637544366460000000
+  - {fileID: 4155434990498667401}
+  stringsBankWriteTime: 637546175020000000
   cacheVersion: 6
 --- !u!114 &163570874307484131
 MonoBehaviour:
@@ -276,6 +394,50 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &4155434990498667401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD Stuff/Tower defence/Desktop/Master.strings.bank
+  Name: Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637546175020000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Tower defence
+    Value: 1098
+  Exists: 1
+--- !u!114 &4218488646629307535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapon Fire Mid
+  m_EditorClassIdentifier: 
+  Path: event:/Weapon Fire Mid
+  guid: dab8f23508730c469bb71ada3f1a8baf
+  Banks:
+  - {fileID: 6089249433495678460}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 531
 --- !u!114 &5903125725288346697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,6 +457,48 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &6089249433495678460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD Stuff/Tower defence/Desktop/Master.bank
+  Name: Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 637546175020000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6397632318882576706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Explosion Small
+  m_EditorClassIdentifier: 
+  Path: event:/Explosion Small
+  guid: 3758b44768e9554d862017eba9cab655
+  Banks:
+  - {fileID: 6089249433495678460}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 437
 --- !u!114 &8179179644533523082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,3 +520,27 @@ MonoBehaviour:
   - Name: Desktop
     Value: 808
   Exists: 1
+--- !u!114 &9119750111962945617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 'event:/tower defence for FMOD '
+  m_EditorClassIdentifier: 
+  Path: 'event:/tower defence for FMOD '
+  guid: e8c0b1477cfce64f88f0ad84da3f94ca
+  Banks:
+  - {fileID: 6089249433495678460}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3951026123701340216}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 152920

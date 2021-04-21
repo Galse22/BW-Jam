@@ -36,7 +36,7 @@ public class MidDamageScript : MonoBehaviour
             // build
             case 1:
                 turretManagerPlayerScript.lostArm = true;
-                playerAnim.SetTrigger("lostRightArm");
+                playerAnim.SetBool("lRaB", true);
                 break;
 
             // up
@@ -52,7 +52,7 @@ public class MidDamageScript : MonoBehaviour
             // repair
             case 4:
                 repairTurretScript.lostArm = true;
-                playerAnim.SetTrigger("lostLefttArm");
+                playerAnim.SetBool("lLaB", true);
                 break;
         }
     }

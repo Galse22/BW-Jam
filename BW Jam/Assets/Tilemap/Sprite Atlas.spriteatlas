@@ -43,7 +43,8 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 2431dc2d77b8fd849b8d0ea2dcb6585e, type: 3}
-    totalSpriteSurfaceArea: 115200
+    - {fileID: 2800000, guid: d61d846d505b0824c9a460f699d72f89, type: 3}
+    totalSpriteSurfaceArea: 230400
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -57,6 +58,14 @@ SpriteAtlas:
   - {fileID: 8040196581939011165, guid: 2431dc2d77b8fd849b8d0ea2dcb6585e, type: 3}
   - {fileID: -6056380807486736462, guid: 2431dc2d77b8fd849b8d0ea2dcb6585e, type: 3}
   - {fileID: -8480404140891905064, guid: 2431dc2d77b8fd849b8d0ea2dcb6585e, type: 3}
+  - {fileID: 4507162162781784842, guid: d61d846d505b0824c9a460f699d72f89, type: 3}
+  - {fileID: 9025258261241886631, guid: d61d846d505b0824c9a460f699d72f89, type: 3}
+  - {fileID: 419748798381995560, guid: d61d846d505b0824c9a460f699d72f89, type: 3}
+  - {fileID: 1277385477702494264, guid: d61d846d505b0824c9a460f699d72f89, type: 3}
+  - {fileID: 8090887076897475042, guid: d61d846d505b0824c9a460f699d72f89, type: 3}
+  - {fileID: -7355046329383874011, guid: d61d846d505b0824c9a460f699d72f89, type: 3}
+  - {fileID: 5892895116198526607, guid: d61d846d505b0824c9a460f699d72f89, type: 3}
+  - {fileID: 4490965917773110958, guid: d61d846d505b0824c9a460f699d72f89, type: 3}
   m_PackedSpriteNamesToIndex:
   - Tileset_0
   - Tileset_1
@@ -66,5 +75,13 @@ SpriteAtlas:
   - Tileset_5
   - Tileset_6
   - Tileset_7
+  - Border_0
+  - Border_1
+  - Border_2
+  - Border_3
+  - Border_4
+  - Border_5
+  - Border_6
+  - Border_7
   m_Tag: Sprite Atlas
   m_IsVariant: 0
