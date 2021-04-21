@@ -75,10 +75,11 @@ public class SpawnerScript : MonoBehaviour
         }
     }
 
-    public void EnemyKilled(float moneyToIncrease)
+    public void EnemyKilled(float moneyToIncrease, int scorePlus)
     {
         enemyKills++;
         gCVarManager.ChangeMoney(moneyToIncrease);
+        gCVarManager.ScoreFunc(scorePlus);
         if(enemyKillsToChangeTime <= enemyKills)
         {
             enemyKills = 0;

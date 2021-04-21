@@ -16,8 +16,9 @@ public class GCVarManager : MonoBehaviour {
     [Header("Screenshake Stuff")]
     public float sIntesityNoMoney;
     public float sTimeNoMoney;
-    void Update () {
-        moneyTXT.text = money.ToString ();
+
+    private void Start() {
+        moneyTXT.text = "Money: " + money.ToString ();
     }
 
     public bool CheckMoney(float moneyToDecrease)
@@ -25,7 +26,7 @@ public class GCVarManager : MonoBehaviour {
         if(money - moneyToDecrease >= 0)
         {
             money -= moneyToDecrease;
-            moneyTXT.text = money.ToString ();
+            moneyTXT.text = "Money: " + money.ToString ();
             return true;
         }
         else
@@ -38,6 +39,16 @@ public class GCVarManager : MonoBehaviour {
 
     public void ChangeMoney (float moneyToChange) {
         money = money + moneyToChange;
-        moneyTXT.text = money.ToString ();
+        moneyTXT.text = "Money: " + money.ToString ();
+    }
+
+    public void ScoreFunc(int scoreToAdd)
+    {
+        score += scoreToAdd;
+        scoreTXT.text = "Score: " + score.ToString ();
+        if(PlayerPrefs.GetInt("HighScore") < score)
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+        }
     }
 }

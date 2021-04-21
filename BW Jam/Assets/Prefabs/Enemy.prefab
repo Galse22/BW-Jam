@@ -107,6 +107,7 @@ MonoBehaviour:
   baseMaterial: {fileID: 2100000, guid: 00ea0c1726ff201428371e57ab375210, type: 2}
   whiteMat: {fileID: 2100000, guid: 69daef0394d533a49b07773dc7f75b11, type: 2}
   moneyToIncrease: 50
+  scoreToAddINT: 5
 --- !u!61 &1728953968848947032
 BoxCollider2D:
   m_ObjectHideFlags: 0

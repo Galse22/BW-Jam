@@ -31,6 +31,10 @@ public class EnemyScript : MonoBehaviour
 
     SpawnerScript spawnerScript;
 
+    string sfxEnemy = "event:/Enemy Death";
+
+    public int scoreToAddINT;
+
 	private void Start() {
         spawnerScript = GameObject.FindWithTag("GameController").GetComponent<SpawnerScript>();
     }
@@ -96,7 +100,8 @@ public class EnemyScript : MonoBehaviour
         }
         else
         {
-            spawnerScript.EnemyKilled(moneyToIncrease);
+            FMODUnity.RuntimeManager.PlayOneShot(sfxEnemy, transform.position);
+            spawnerScript.EnemyKilled(moneyToIncrease, scoreToAddINT);
             this.gameObject.SetActive(false);
         }
     }

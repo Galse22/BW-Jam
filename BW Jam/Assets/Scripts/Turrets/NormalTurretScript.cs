@@ -18,6 +18,8 @@ public class NormalTurretScript : MonoBehaviour {
 
     public string bulletString;
 
+    public string sfxString;
+
     void OnEnable () {
         StartCoroutine ("shootCoroutine");
         StartCoroutine ("calcuateAngleCoroutine");
@@ -34,6 +36,7 @@ public class NormalTurretScript : MonoBehaviour {
             NormalBulletScript normalBulletScript = spawnedBullet.GetComponent<NormalBulletScript>();
             normalBulletScript.targetPos = transformToBeAimedAt;
             spawnedBullet.SetActive(true);
+            FMODUnity.RuntimeManager.PlayOneShot(sfxString, transform.position);
         }
         transformToBeAimedAt = null;
         StartCoroutine ("shootCoroutine");

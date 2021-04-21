@@ -217,6 +217,7 @@ MonoBehaviour:
   transformToBeAimedAt: {fileID: 0}
   firePlace: {fileID: 4629456501622299209}
   bulletString: Bullet1
+  sfxString: event:/Weapon Fire Small
 --- !u!61 &5833379965570134608
 BoxCollider2D:
   m_ObjectHideFlags: 0
