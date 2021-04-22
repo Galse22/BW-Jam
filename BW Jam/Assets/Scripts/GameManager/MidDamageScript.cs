@@ -1,9 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MidDamageScript : MonoBehaviour
-{
+public class MidDamageScript : MonoBehaviour {
 
     public MusicManager musicManager;
     public RepairTurretScript repairTurretScript;
@@ -20,7 +19,7 @@ public class MidDamageScript : MonoBehaviour
     string SmallDmgEvent = "event:/Explosion Small";
     string DamageEvent = "event:/Explosion Large";
 
-    [Header("Player Stuff")]
+    [Header ("Player Stuff")]
 
     public GameObject normie;
     public GameObject leftHand;
@@ -29,89 +28,118 @@ public class MidDamageScript : MonoBehaviour
 
     bool lostLeft;
     bool lostRight;
-    public void MidTakeDamage(int typeOfDamage)
-    {
-        BothMidAndHeart();
-        if(typeOfDamage == 0)
-        {
-            FMODUnity.RuntimeManager.PlayOneShot(SmallDmgEvent, transform.position);
+    public void MidTakeDamage (int typeOfDamage) {
+        BothMidAndHeart ();
+        if (typeOfDamage == 0) {
+            FMODUnity.RuntimeManager.PlayOneShot (SmallDmgEvent, transform.position);
         }
-        switch(typeOfDamage)
-        {
+        switch (typeOfDamage) {
             // build
             case 1:
                 turretManagerPlayerScript.lostArm = true;
-                playerAnim.SetBool("lRaB", true);
+                playerAnim.SetBool ("lRaB", true);
                 lostRight = true;
-                if(lostLeft == true)
-                {
-                    rightHand.SetActive(false);
-                    noHand.SetActive(true);
+                if (lostLeft == true) {
+                    rightHand.SetActive (false);
+                    noHand.SetActive (true);
+                } else {
+                    normie.SetActive (false);
+                    leftHand.SetActive (true);
                 }
-                else
-                {
-                    normie.SetActive(false);
-                    leftHand.SetActive(true);
-                }
-                SFX1();
+                SFX1 ();
                 break;
 
-            // up
+                // up
             case 2:
                 playerMovement.lostUpMov = true;
-                SFX1();
+                SFX1 ();
                 break;
 
-            // right
+                // right
             case 3:
                 playerMovement.lostRightMov = true;
-                SFX1();
+                SFX1 ();
                 break;
 
-            // repair
+                // repair
             case 4:
                 repairTurretScript.lostArm = true;
-                playerAnim.SetBool("lLaB", true);
+                playerAnim.SetBool ("lLaB", true);
                 lostLeft = true;
-                if(lostRight == true)
-                {
-                    leftHand.SetActive(false);
-                    noHand.SetActive(true);
+                if (lostRight == true) {
+                    leftHand.SetActive (false);
+                    noHand.SetActive (true);
+                } else {
+                    normie.SetActive (false);
+                    rightHand.SetActive (true);
                 }
-                else
-                {
-                    normie.SetActive(false);
-                    rightHand.SetActive(true);
-                }
-                SFX1();
+                SFX1 ();
                 break;
         }
     }
 
-    public void TakeDamageHeart()
-    {
-        BothMidAndHeart();
-        FMODUnity.RuntimeManager.PlayOneShot(SmallDmgEvent, transform.position);
+    public void TakeDamageHeart () {
+        BothMidAndHeart ();
+        FMODUnity.RuntimeManager.PlayOneShot (SmallDmgEvent, transform.position);
     }
 
-    void BothMidAndHeart()
-    {
-        bullets = GameObject.FindGameObjectsWithTag("Bullet");
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach(GameObject bullet in bullets)
-        {
-            bullet.SetActive(false);
+    void BothMidAndHeart () {
+        bullets = GameObject.FindGameObjectsWithTag ("Bullet");
+        enemies = GameObject.FindGameObjectsWithTag ("Enemy");
+        foreach (GameObject bullet in bullets) {
+            bullet.SetActive (false);
         }
-        foreach(GameObject enemy in enemies)
-        {
-            enemy.SetActive(false);
+        foreach (GameObject enemy in enemies) {
+            enemy.SetActive (false);
         }
         CinemachineShake.Instance.ShakeCamera (sIntensity, sTime);
-        musicManager.IncreaseDanger();
+        musicManager.IncreaseDanger ();
     }
 
-    void SFX1()
-    {
-        FMODUnity.RuntimeManager.PlayOneShot(DamageEvent, transform.position);
+    void SFX1 () {
+        FMODUnity.RuntimeManager.PlayOneShot (DamageEvent, transform.position);
+    }
+
+    public void UntakeDamage (int damageType) {
+        switch (damageType) {
+            // build
+            case 1:
+                turretManagerPlayerScript.lostArm = false;
+                // playerAnim.SetBool ("lRaB", true);
+                // lostRight = true;
+                // if (lostLeft == true) {
+                //     rightHand.SetActive (false);
+                //     noHand.SetActive (true);
+                // } else {
+                //     normie.SetActive (false);
+                //     leftHand.SetActive (true);
+                // }
+                break;
+
+                // up
+            case 2:
+                playerMovement.lostUpMov = false;
+                SFX1 ();
+                break;
+
+                // right
+            case 3:
+                playerMovement.lostRightMov = false;
+                break;
+
+                // repair
+            case 4:
+                // repairTurretScript.lostArm = false;
+                // playerAnim.SetBool ("lLaB", true);
+                // lostLeft = true;
+                // if (lostRight == true) {
+                //     leftHand.SetActive (false);
+                //     noHand.SetActive (true);
+                // } else {
+                //     normie.SetActive (false);
+                //     rightHand.SetActive (true);
+                // }
+                break;
+        }
     }
 }

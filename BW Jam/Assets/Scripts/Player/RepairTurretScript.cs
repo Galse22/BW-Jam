@@ -20,6 +20,8 @@ public class RepairTurretScript : MonoBehaviour
     public float moneyTurret4;
 
     float baseMoveSpeedPlayer;
+
+    string sfxRepair = "event:/Player Repair";
     
 
     [HideInInspector] public bool lostArm;
@@ -119,6 +121,7 @@ public class RepairTurretScript : MonoBehaviour
         repairedGOstList.Add(currentSpot);
         StartCoroutine("RemoveFromListIE", currentSpot);
         currentSpot = null;
+        FMODUnity.RuntimeManager.PlayOneShot(sfxRepair, transform.position);
     }
 
     IEnumerator RemoveFromListIE(GameObject goToBeRemoved)

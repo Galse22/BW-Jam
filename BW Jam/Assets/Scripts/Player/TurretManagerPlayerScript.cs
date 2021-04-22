@@ -12,6 +12,8 @@ public class TurretManagerPlayerScript : MonoBehaviour
     public string uiThingyNameToPool;
     public float moneyThatCosts;
 
+    string sfxBuild = "event:/Player Repair 2";
+
     [HideInInspector] public bool lostArm;
 
     private void Update() {
@@ -77,6 +79,7 @@ public class TurretManagerPlayerScript : MonoBehaviour
         turret1.transform.SetParent(currentSpot.transform);
         turret1.SetActive(true);
         currentSpot = null;
+        FMODUnity.RuntimeManager.PlayOneShot(sfxBuild, transform.position);
     }
 
     public void ChangeScriptableObjects(TurretUIScriptableObject newTurretScritableObject)

@@ -24,6 +24,15 @@ public class SpawnerScript : MonoBehaviour
     public Transform[] pathEnemyBottom;
 
     int indexNumber;
+
+    public int oddInt;
+    public float minToStartBoss;
+    int oddIntInCode;
+    bool oddBool;
+
+    GameObject enemySpawned;
+    EnemyScript enemyScript;
+    bool shouldStartBoss;
     void Start()
     {
         StartCoroutine("SpawnerCoroutine");
@@ -34,8 +43,18 @@ public class SpawnerScript : MonoBehaviour
         yield return new WaitForSeconds(timeBtwSpawn);
         foreach(Transform place in placesToSpawnEnemy)
         {
-            GameObject enemySpawned = ObjectPooler.SharedInstance.GetPooledObject("Enemy");
-            EnemyScript enemyScript = enemySpawned.GetComponent<EnemyScript>();
+            
+            oddIntInCode = Random.Range(0, oddInt + 1);
+            if(oddBool == false && oddIntInCode == 1 && shouldStartBoss)
+            {
+                oddBool = true;
+                enemySpawned = ObjectPooler.SharedInstance.GetPooledObject("BigEnemy");
+            }
+            else
+            {
+                enemySpawned = ObjectPooler.SharedInstance.GetPooledObject("Enemy");
+            }
+            enemyScript = enemySpawned.GetComponent<EnemyScript>();
             switch(indexNumber)
             {
                 case 0:
@@ -60,6 +79,7 @@ public class SpawnerScript : MonoBehaviour
             indexNumber++;
         }
         indexNumber = 0;
+        oddBool = false;
         StartCoroutine("SpawnerCoroutine");
     }
 
@@ -68,6 +88,10 @@ public class SpawnerScript : MonoBehaviour
         if(timeBtwSpawn - timeToDecrease >= minimumTime)
         {
             timeBtwSpawn -= timeToDecrease;
+            if(timeBtwSpawn <= minToStartBoss)
+            {
+                shouldStartBoss = true;
+            }
         }
         else
         {
