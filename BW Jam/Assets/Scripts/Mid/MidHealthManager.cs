@@ -9,26 +9,24 @@ public class MidHealthManager : MonoBehaviour
     public int dmgType;
     public MidDamageScript midDamageScript;
 
-    public GameObject goToEnableOnDisable;
-
     Animator anim;
 
     bool lost;
 
-    public Transform healthBar;
-    public GameObject healthBarGO;
+    Transform healthBar;
+    GameObject healthBarGO;
 
     public bool isOnRange;
-    float healthNeeded;
+    public float healthNeeded = 10f;
     float currentHealth;
     float healthDivided;
 
     public bool isX;
 
-    public bool isXHealth;
-
     private void Start() {
         anim = GetComponent<Animator>();
+        healthBar = this.gameObject.transform.GetChild(0);
+        healthBarGO = healthBar.gameObject;
     }
 
     void Update()
@@ -43,12 +41,10 @@ public class MidHealthManager : MonoBehaviour
             {
                 lost = false;
                 healthBarGO.SetActive(false);
+                midDamageScript.UntakeDamage(dmgType);
+                anim.SetTrigger("back");
             }
         }
-    }
-
-    private void OnDisable() {
-        goToEnableOnDisable.SetActive(true);
     }
     private void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.tag == "Enemy" && !lost) {
@@ -59,8 +55,8 @@ public class MidHealthManager : MonoBehaviour
             {
                 midDamageScript.MidTakeDamage(dmgType);
                 lost = true;
-                healthBarGO.SetActive(false);
-                currentHealth = 0f;
+                healthBarGO.SetActive(true);
+                currentHealth = 0.1f;
                 ScaleHealthBarFunc();
             }
             else
