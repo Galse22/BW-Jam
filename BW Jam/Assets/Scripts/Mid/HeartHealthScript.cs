@@ -10,6 +10,7 @@ public class HeartHealthScript : MonoBehaviour
     Animator anim;
 
     public GameObject goLost;
+    public GameObject rightSideGO;
 
     private void Start() {
         anim = GetComponent<Animator>();
@@ -32,6 +33,7 @@ public class HeartHealthScript : MonoBehaviour
         anim.SetTrigger("lostHealth");
         if(health == 0 || health == -1 || health == -2)
         {
+            rightSideGO.SetActive(false);
             goLost.SetActive(true);
             this.gameObject.SetActive(false);
             Time.timeScale = 0;

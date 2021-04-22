@@ -9,15 +9,26 @@ public class RepairTurretScript : MonoBehaviour
     float activeMoney;
 
     public GCVarManager gCVarManager;
+    public PlayerMovement playerShmovement;
+
+    public float timeMoveSpeedBoost;
+    public float otherMoveSpeed;
     public float timeB4RemovingItemFromList;
     public float moneyTurret1;
     public float moneyTurret2;
     public float moneyTurret3;
     public float moneyTurret4;
 
+    float baseMoveSpeedPlayer;
+    
+
     [HideInInspector] public bool lostArm;
 
     public List<GameObject> repairedGOstList;
+
+    private void Start() {
+        baseMoveSpeedPlayer = playerShmovement.moveSpeed;
+    }
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.tag == "Turret1")
@@ -94,6 +105,9 @@ public class RepairTurretScript : MonoBehaviour
             if(!repairedGOstList.Contains(currentSpot) && gCVarManager.CheckMoney(activeMoney))
             {
                 RepairTurretFunc();
+                playerShmovement.moveSpeed = otherMoveSpeed;
+                CancelInvoke("SpeedBoost");
+                Invoke("SpeedBoost", timeMoveSpeedBoost);
             }
         }
     }
@@ -111,5 +125,10 @@ public class RepairTurretScript : MonoBehaviour
     {
         yield return new WaitForSeconds(timeB4RemovingItemFromList);
         repairedGOstList.Remove(goToBeRemoved);
+    }
+
+    void SpeedBoost()
+    {
+        playerShmovement.moveSpeed = baseMoveSpeedPlayer;
     }
 }

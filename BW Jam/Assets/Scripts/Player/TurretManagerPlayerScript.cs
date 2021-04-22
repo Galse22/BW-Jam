@@ -79,7 +79,7 @@ public class TurretManagerPlayerScript : MonoBehaviour
         currentSpot = null;
     }
 
-    void ChangeScriptableObjects(TurretUIScriptableObject newTurretScritableObject)
+    public void ChangeScriptableObjects(TurretUIScriptableObject newTurretScritableObject)
     {
         turretUIScriptableObject = newTurretScritableObject;
         uiThingyNameToPool = turretUIScriptableObject.uiThingyNameToPool;

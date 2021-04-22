@@ -31,7 +31,7 @@ public class NormalBulletScript : MonoBehaviour {
 
     void StartCC()
     {
-        if(this.gameObject.active)
+        if(this.gameObject.activeInHierarchy)
         {
             StartCoroutine("checkEnemyCoroutine");
         }
