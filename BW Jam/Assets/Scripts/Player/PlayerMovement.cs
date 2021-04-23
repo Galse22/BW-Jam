@@ -13,12 +13,13 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
-    public bool lostUpMov;
-    public bool lostRightMov;
+    [HideInInspector] public bool lostUpMov;
+    [HideInInspector] public bool lostRightMov;
     
     bool lookingRight;
 
-    // [HideInInspector] 
+    public SpawnerScript spawnerScript;
+    bool activateSpawner;
 
     void Update()
     {
@@ -51,6 +52,15 @@ public class PlayerMovement : MonoBehaviour
         }
         
         CheckFlip();
+
+        if(!activateSpawner)
+        {
+            if(movement.x != 0 || movement.y != 0 || Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2"))
+            {
+                spawnerScript.enabled = true;
+                activateSpawner = true;
+            }
+        }
     }
 
     private void FixedUpdate()

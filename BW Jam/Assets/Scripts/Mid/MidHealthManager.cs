@@ -44,6 +44,7 @@ public class MidHealthManager : MonoBehaviour
                 health = 4;
                 midDamageScript.UntakeDamage(dmgType);
                 anim.SetTrigger("back");
+                SetAlpha(1f);
             }
         }
     }
@@ -60,6 +61,7 @@ public class MidHealthManager : MonoBehaviour
                 currentHealth = 0.1f;
                 healthDivided = currentHealth / healthNeeded;
                 ScaleHealthBarFunc();
+                SetAlpha(0.8f);
             }
             else
             {
@@ -81,5 +83,12 @@ public class MidHealthManager : MonoBehaviour
                 healthBar.localScale = new Vector3 (1, healthDivided);
             }
         }
+    }
+
+    void SetAlpha(float alphaToSet)
+    {
+        Color tmp = this.gameObject.GetComponent<SpriteRenderer>().color;
+        tmp. a = alphaToSet;
+        this.gameObject. GetComponent<SpriteRenderer>().color = tmp;
     }
 }

@@ -15,6 +15,10 @@ public class SpawnerScript : MonoBehaviour
 
     public int enemyKillsToChangeTime;
     int enemyKills;
+    public float timeBtwOneBossPerWaveIsDisabled;
+
+    public List<float> oddChangerFloat;
+    public List<int> oddChangerInt;
 
     [Header("Places N Stuff")]
     public Transform[] placesToSpawnEnemy;
@@ -25,17 +29,26 @@ public class SpawnerScript : MonoBehaviour
 
     int indexNumber;
 
+    int forIndexNumber;
+
     public int oddInt;
     public float minToStartBoss;
     int oddIntInCode;
     bool oddBool;
 
+    float lastFloat;
+    int lastInt;
+
+    bool listChanged = true;
+
     GameObject enemySpawned;
     EnemyScript enemyScript;
     bool shouldStartBoss;
+    bool oneBossPerWave = true;
     void Start()
     {
         StartCoroutine("SpawnerCoroutine");
+        forIndexNumber = oddChangerFloat.Count;
     }
 
     IEnumerator SpawnerCoroutine()
@@ -45,14 +58,29 @@ public class SpawnerScript : MonoBehaviour
         {
             
             oddIntInCode = Random.Range(0, oddInt + 1);
-            if(oddBool == false && oddIntInCode == 1 && shouldStartBoss)
+            if(!oneBossPerWave)
             {
-                oddBool = true;
-                enemySpawned = ObjectPooler.SharedInstance.GetPooledObject("BigEnemy");
+                if(oddIntInCode == 1 && shouldStartBoss)
+                {
+                    oddBool = true;
+                    enemySpawned = ObjectPooler.SharedInstance.GetPooledObject("BigEnemy");
+                }
+                else
+                {
+                    enemySpawned = ObjectPooler.SharedInstance.GetPooledObject("Enemy");
+                }
             }
             else
             {
-                enemySpawned = ObjectPooler.SharedInstance.GetPooledObject("Enemy");
+                if(oddBool == false && oddIntInCode == 1 && shouldStartBoss)
+                {
+                    oddBool = true;
+                    enemySpawned = ObjectPooler.SharedInstance.GetPooledObject("BigEnemy");
+                }
+                else
+                {
+                    enemySpawned = ObjectPooler.SharedInstance.GetPooledObject("Enemy");
+                }
             }
             enemyScript = enemySpawned.GetComponent<EnemyScript>();
             switch(indexNumber)
@@ -88,10 +116,7 @@ public class SpawnerScript : MonoBehaviour
         if(timeBtwSpawn - timeToDecrease >= minimumTime)
         {
             timeBtwSpawn -= timeToDecrease;
-            if(timeBtwSpawn <= minToStartBoss)
-            {
-                shouldStartBoss = true;
-            }
+            FloatNBoolsShenanigans();
         }
         else
         {
@@ -108,6 +133,32 @@ public class SpawnerScript : MonoBehaviour
         {
             enemyKills = 0;
             DecreaseTimeBtwSpawnFunc();
+        }
+    }
+
+    void FloatNBoolsShenanigans()
+    {
+        if(timeBtwSpawn <= minToStartBoss)
+        {
+            shouldStartBoss = true;
+        }
+        if(timeBtwSpawn <= timeBtwOneBossPerWaveIsDisabled)
+        {
+            oneBossPerWave = false;
+        }
+        if(listChanged)
+        {
+            lastFloat = oddChangerFloat.Count;
+            lastFloat--;
+        }
+        if(lastFloat >= timeBtwSpawn)
+        {
+            lastInt = oddChangerInt.Count;
+            lastInt--;
+            oddInt = lastInt;
+            oddChangerFloat.Remove(lastFloat);
+            oddChangerInt.Remove(lastInt);
+            listChanged = true;
         }
     }
 }

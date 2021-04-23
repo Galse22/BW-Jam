@@ -12,6 +12,10 @@ public class TurretManagerPlayerScript : MonoBehaviour
     public string uiThingyNameToPool;
     public float moneyThatCosts;
 
+    bool hasPlacedAnyTurret;
+
+    public GameObject tutorialTXTGo;
+
     string sfxBuild = "event:/Player Repair 2";
 
     [HideInInspector] public bool lostArm;
@@ -69,6 +73,11 @@ public class TurretManagerPlayerScript : MonoBehaviour
             {
                 CreateTurret();
             }
+            if(!hasPlacedAnyTurret)
+            {
+                Invoke("DisableTutorial", 3.5f);
+                hasPlacedAnyTurret = true;
+            }
         }
     }
 
@@ -87,6 +96,11 @@ public class TurretManagerPlayerScript : MonoBehaviour
         turretUIScriptableObject = newTurretScritableObject;
         uiThingyNameToPool = turretUIScriptableObject.uiThingyNameToPool;
         moneyThatCosts = turretUIScriptableObject.moneyThatCosts;
+    }
+
+    void DisableTutorial()
+    {
+        tutorialTXTGo.SetActive(false);
     }
 
 }
