@@ -36,7 +36,7 @@ public class HeartHealthScript : MonoBehaviour
             rightSideGO.SetActive(false);
             goLost.SetActive(true);
             this.gameObject.SetActive(false);
-            Time.timeScale = 0;
+            Time.timeScale = 0.000001f;
         }
         else
         {

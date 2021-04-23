@@ -13,7 +13,7 @@ public class MusicManager : MonoBehaviour
     public int dangerMeter = 1;
     bool audioResumed;
     bool playerInput;
-
+    
     private void Update() {
         if (playerInput == false && Input.anyKeyDown)
         {
@@ -42,6 +42,7 @@ public class MusicManager : MonoBehaviour
         ResumeAudio();
         yield return new WaitForSeconds(1);
         instance = FMODUnity.RuntimeManager.CreateInstance(music);
+        instance.setParameterByName("Danger", dangerMeter);
         instance.start();
     }
 

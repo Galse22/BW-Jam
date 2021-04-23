@@ -22675,7 +22675,7 @@ MonoBehaviour:
   - {fileID: 1585383644}
   - {fileID: 1564760981}
   - {fileID: 15377900}
-  oddInt: 2
+  oddInt: 12
   minToStartBoss: 4
 --- !u!114 &1363558377
 MonoBehaviour:
@@ -33062,6 +33062,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7964185983008170244, guid: 41398da5b0d623a4ca369e192488ca3d, type: 3}
   m_PrefabInstance: {fileID: 539535265}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2078921181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078921180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d31c9ab492ed0542b269da50a9d8235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2079172668
 PrefabInstance:
   m_ObjectHideFlags: 0
