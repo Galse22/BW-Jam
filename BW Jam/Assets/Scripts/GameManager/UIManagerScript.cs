@@ -10,7 +10,6 @@ public class UIManagerScript : MonoBehaviour
     public TurretUIScriptableObject turretUIScriptableObject1;
     public TurretUIScriptableObject turretUIScriptableObject2;
     public TurretUIScriptableObject turretUIScriptableObject3;
-    public TurretUIScriptableObject turretUIScriptableObject4;
 
     public GameObject[] borderArray;
 
@@ -36,10 +35,5 @@ public class UIManagerScript : MonoBehaviour
     public void Button3Func()
     {
         GeneralFunc(turretUIScriptableObject3, 2);
-    }
-
-    public void Button4Func()
-    {
-        GeneralFunc(turretUIScriptableObject4, 3);
     }
 }

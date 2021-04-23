@@ -17,7 +17,6 @@ public class RepairTurretScript : MonoBehaviour
     public float moneyTurret1;
     public float moneyTurret2;
     public float moneyTurret3;
-    public float moneyTurret4;
 
     float baseMoveSpeedPlayer;
 
@@ -48,11 +47,6 @@ public class RepairTurretScript : MonoBehaviour
             currentSpot = col.gameObject;
             activeMoney = moneyTurret3;
         }
-        else if(col.gameObject.tag == "Turret4")
-        {
-            currentSpot = col.gameObject;
-            activeMoney = moneyTurret4;
-        }
 
         if(currentSpot != null)
         {
@@ -76,11 +70,6 @@ public class RepairTurretScript : MonoBehaviour
         {
             currentSpot = col.gameObject;
             activeMoney = moneyTurret3;
-        }
-        else if(col.gameObject.tag == "Turret4")
-        {
-            currentSpot = col.gameObject;
-            activeMoney = moneyTurret4;
         }
 
         if(currentSpot != null)

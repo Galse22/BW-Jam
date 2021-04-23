@@ -41,6 +41,7 @@ public class MidHealthManager : MonoBehaviour
             {
                 lost = false;
                 healthBarGO.SetActive(false);
+                health = 4;
                 midDamageScript.UntakeDamage(dmgType);
                 anim.SetTrigger("back");
             }
@@ -57,6 +58,7 @@ public class MidHealthManager : MonoBehaviour
                 lost = true;
                 healthBarGO.SetActive(true);
                 currentHealth = 0.1f;
+                healthDivided = currentHealth / healthNeeded;
                 ScaleHealthBarFunc();
             }
             else
@@ -68,13 +70,16 @@ public class MidHealthManager : MonoBehaviour
 
     void ScaleHealthBarFunc()
     {
-        if(isX)
+        if(lost == true)
         {
-            healthBar.localScale = new Vector3 (healthDivided, 1);
-        }
-        else
-        {
-            healthBar.localScale = new Vector3 (1, healthDivided);
+            if(isX)
+            {
+                healthBar.localScale = new Vector3 (healthDivided, 1);
+            }
+            else
+            {
+                healthBar.localScale = new Vector3 (1, healthDivided);
+            }
         }
     }
 }

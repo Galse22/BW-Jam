@@ -31,6 +31,12 @@ public class MusicManager : MonoBehaviour
         instance.setParameterByName("Danger", dangerMeter);
     }
 
+    public void ReduceDanger(int value2Decrease)
+    {
+        dangerMeter = dangerMeter - value2Decrease;
+        instance.setParameterByName("Danger", dangerMeter);
+    }
+
     IEnumerator WaitSecondsAudio()
     {
         ResumeAudio();

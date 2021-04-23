@@ -101,19 +101,22 @@ public class MidDamageScript : MonoBehaviour {
     }
 
     public void UntakeDamage (int damageType) {
+        musicManager.ReduceDanger(2);
         switch (damageType) {
             // build
             case 1:
                 turretManagerPlayerScript.lostArm = false;
-                // playerAnim.SetBool ("lRaB", true);
-                // lostRight = true;
-                // if (lostLeft == true) {
-                //     rightHand.SetActive (false);
-                //     noHand.SetActive (true);
-                // } else {
-                //     normie.SetActive (false);
-                //     leftHand.SetActive (true);
-                // }
+                playerAnim.SetBool ("lRaB", false);
+                lostRight = false;
+                if (lostLeft == true) {
+                    playerAnim.SetTrigger("backToR");
+                    rightHand.SetActive (true);
+                    noHand.SetActive (false);
+                } else {
+                    playerAnim.SetTrigger("backToS");
+                    normie.SetActive (true);
+                    leftHand.SetActive(false);
+                }
                 break;
 
                 // up
@@ -129,16 +132,18 @@ public class MidDamageScript : MonoBehaviour {
 
                 // repair
             case 4:
-                // repairTurretScript.lostArm = false;
-                // playerAnim.SetBool ("lLaB", true);
-                // lostLeft = true;
-                // if (lostRight == true) {
-                //     leftHand.SetActive (false);
-                //     noHand.SetActive (true);
-                // } else {
-                //     normie.SetActive (false);
-                //     rightHand.SetActive (true);
-                // }
+                repairTurretScript.lostArm = false;
+                playerAnim.SetBool ("lLaB", false);
+                lostLeft = false;
+                if (lostRight == true) {
+                    playerAnim.SetTrigger("backToL");
+                    leftHand.SetActive (true);
+                    noHand.SetActive (false);
+                } else {
+                    normie.SetActive (true);
+                    playerAnim.SetTrigger("backToS");
+                    rightHand.SetActive (false);
+                }
                 break;
         }
     }

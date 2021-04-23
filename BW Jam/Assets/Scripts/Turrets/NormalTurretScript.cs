@@ -19,7 +19,9 @@ public class NormalTurretScript : MonoBehaviour {
     public string bulletString;
 
     public string sfxString;
-
+    private void OnDisable() {
+        transformToChangeZ.eulerAngles = new Vector3 (0, 0, 0);
+    }
     void OnEnable () {
         StartCoroutine ("shootCoroutine");
         StartCoroutine ("calcuateAngleCoroutine");

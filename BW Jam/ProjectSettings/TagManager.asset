@@ -9,6 +9,8 @@ TagManager:
   - Turret1
   - Bullet
   - PlayerCol
+  - Turret2
+  - Turret3
   layers:
   - Default
   - TransparentFX
