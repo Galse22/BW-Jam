@@ -11,6 +11,7 @@ TagManager:
   - PlayerCol
   - Turret2
   - Turret3
+  - MusicManagerGO
   layers:
   - Default
   - TransparentFX

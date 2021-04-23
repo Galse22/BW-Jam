@@ -180,19 +180,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7964185983008170245, guid: 41398da5b0d623a4ca369e192488ca3d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.399982
+      value: -0.00020981
       objectReference: {fileID: 0}
     - target: {fileID: 7964185983008170245, guid: 41398da5b0d623a4ca369e192488ca3d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.39997864
+      value: 0.000026703
       objectReference: {fileID: 0}
     - target: {fileID: 7964185983008170245, guid: 41398da5b0d623a4ca369e192488ca3d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 682.9
+      value: 399.81665
       objectReference: {fileID: 0}
     - target: {fileID: 7964185983008170245, guid: 41398da5b0d623a4ca369e192488ca3d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 191.20001
+      value: 87.04414
       objectReference: {fileID: 0}
     - target: {fileID: 7964185983008170245, guid: 41398da5b0d623a4ca369e192488ca3d, type: 3}
       propertyPath: m_AnchorMin.x
@@ -240,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7964185983008170246, guid: 41398da5b0d623a4ca369e192488ca3d, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 45
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41398da5b0d623a4ca369e192488ca3d, type: 3}
@@ -284,8 +284,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -77.3, y: 50}
-  m_SizeDelta: {x: 130.19879, y: 100}
+  m_AnchoredPosition: {x: -59.3, y: 36.009}
+  m_SizeDelta: {x: 94.24509, y: 72.018005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &229658859
 MonoBehaviour:
@@ -517,8 +517,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 85.5, y: 50}
-  m_SizeDelta: {x: 170.99902, y: 100}
+  m_AnchoredPosition: {x: 55.5, y: 36}
+  m_SizeDelta: {x: 111.0647, y: 72.03601}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &653145342
 MonoBehaviour:
@@ -894,8 +894,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -2.8, y: 43.522095}
-  m_SizeDelta: {x: 452.40195, y: 87.04419}
+  m_AnchoredPosition: {x: 0.000006198883, y: 41.422256}
+  m_SizeDelta: {x: 426.10904, y: 82.84451}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415358605
 MonoBehaviour:
@@ -942,7 +942,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 762735577}
         m_TargetAssemblyTypeName: MenuManagerScript, Assembly-CSharp
-        m_MethodName: LoadScene0
+        m_MethodName: LoadScene1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

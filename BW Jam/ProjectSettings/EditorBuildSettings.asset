@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/AdBlock.unity
+    guid: 7375575efd7959842bfc44a85f169f39
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: cd12efa2841e6c54c8d5970643018ca8
   - enabled: 1
@@ -14,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/About.unity
     guid: 5b2da682ba7a357478cc9a30dec3f6fc
+  - enabled: 1
+    path: Assets/Scenes/SpaceScene.unity
+    guid: 5f5898503fd21ac4e8823f54df9b7622
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729

@@ -5,15 +5,15 @@ using UnityEngine.UI;
 public class Link : MonoBehaviour {
 
 	public void OpenYT () {
-#if !UNITY_EDITOR
+	#if !UNITY_EDITOR
 		openWindow ("https://www.youtube.com/channel/UCBgA6tSAxLkdLJVAILqZLuQ");
-#endif
+	#endif
 	}
 
 	public void OpenSoundcloud () {
-#if !UNITY_EDITOR
+	#if !UNITY_EDITOR
 		openWindow ("https://soundcloud.com/user-829631810");
-#endif
+	#endif
 	}
 
 	[DllImport ("__Internal")]

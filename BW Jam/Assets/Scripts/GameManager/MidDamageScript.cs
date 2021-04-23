@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class MidDamageScript : MonoBehaviour {
 
-    public MusicManager musicManager;
+    MusicManager musicManager;
     public RepairTurretScript repairTurretScript;
     public TurretManagerPlayerScript turretManagerPlayerScript;
 
     public PlayerMovement playerMovement;
+    public GCVarManager gCVarManager;
 
     public Animator playerAnim;
     public float sIntensity;
     public float sTime;
     GameObject[] bullets;
     GameObject[] enemies;
+
+    public float moneyToIncreaseOnLostHealth;
 
     string SmallDmgEvent = "event:/Explosion Small";
     string DamageEvent = "event:/Explosion Large";
@@ -28,6 +31,10 @@ public class MidDamageScript : MonoBehaviour {
 
     bool lostLeft;
     bool lostRight;
+
+    private void Start() {
+         musicManager = GameObject.FindWithTag("MusicManagerGO").GetComponent<MusicManager>();
+    }
     public void MidTakeDamage (int typeOfDamage) {
         BothMidAndHeart ();
         if (typeOfDamage == 0) {
@@ -94,6 +101,7 @@ public class MidDamageScript : MonoBehaviour {
         }
         CinemachineShake.Instance.ShakeCamera (sIntensity, sTime);
         musicManager.IncreaseDanger ();
+        gCVarManager.ChangeMoney(moneyToIncreaseOnLostHealth);
     }
 
     void SFX1 () {

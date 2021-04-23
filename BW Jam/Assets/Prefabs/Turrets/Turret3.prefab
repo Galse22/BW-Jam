@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 20ea8fd73c6744849916ae30df44fcb8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.3529412}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBtwAttack: 4
-  dmgToDeal: 10
+  dmgToDeal: 30
   attackRadius: 3
   thisTransform: {fileID: 8241804516971141932}
   enemyLayerMask:

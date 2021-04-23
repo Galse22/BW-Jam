@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Turret3
   m_EditorClassIdentifier: 
   uiThingyNameToPool: Turret3
-  moneyThatCosts: 200
+  moneyThatCosts: 300

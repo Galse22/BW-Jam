@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MToGoToMenu : MonoBehaviour
 {
-    
+    MusicManager musicManager;
+    private void Start() {
+        musicManager = GameObject.FindWithTag("MusicManagerGO").GetComponent<MusicManager>();
+    }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.M))
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene(0);
+            musicManager.SetTo0Danger();
+            SceneManager.LoadScene(1);
         }
     }
 }

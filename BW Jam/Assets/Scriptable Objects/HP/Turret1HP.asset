@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30fb26cbf5c8c634fa5977be6f58fb38, type: 3}
   m_Name: Turret1HP
   m_EditorClassIdentifier: 
-  baseTurretHealth: 125
-  decreaserMultiplier: 5
+  baseTurretHealth: 25
+  decreaserMultiplier: 1
