@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class MenuManagerScript : MonoBehaviour {
     public Text scoreTXT;
     string sfxString = "event:/Turret Select";
+
+    public GameObject goToEnable;
+    public GameObject goToDisable;
     void Start () {
         if (scoreTXT != null) {
             scoreTXT.text = "HIGH SCORE: " + PlayerPrefs.GetInt ("HighScore").ToString ();
@@ -31,5 +34,12 @@ public class MenuManagerScript : MonoBehaviour {
     public void LoadScene4 () {
         FMODUnity.RuntimeManager.PlayOneShot(sfxString);
         SceneManager.LoadScene (4);
+    }
+
+    public void PressButtonFunc()
+    {
+        goToDisable.SetActive(false);
+        goToEnable.SetActive(true);
+        FMODUnity.RuntimeManager.PlayOneShot(sfxString);
     }
 }

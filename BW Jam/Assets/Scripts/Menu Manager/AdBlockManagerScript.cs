@@ -6,14 +6,15 @@ using UnityEngine.SceneManagement;
 public class AdBlockManagerScript : MonoBehaviour
 {
     int adBlockPrefInt;
+    public bool isTrue;
     private void Start() {
         adBlockPrefInt = PlayerPrefs.GetInt("AdBlockPref");
         PlayerPrefs.SetInt("AdBlockPref", adBlockPrefInt + 1);
-        if(adBlockPrefInt == 2)
+        if(adBlockPrefInt == 1)
         {
             SceneManager.LoadScene(5);
         }
-        else if(adBlockPrefInt > 2)
+        else if(adBlockPrefInt > 1 && isTrue)
         {
             SceneManager.LoadScene(4);
         }
