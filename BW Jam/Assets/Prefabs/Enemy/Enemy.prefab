@@ -100,13 +100,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints:
   - {fileID: 7071254797661539681}
-  moveSpeed: 2
-  baseHealth: 90
+  moveSpeed: 1.5
+  baseHealth: 100
   timeToResetMaterial: 0.2
   rend: {fileID: 1625009961246130892}
   baseMaterial: {fileID: 2100000, guid: 00ea0c1726ff201428371e57ab375210, type: 2}
   whiteMat: {fileID: 2100000, guid: 69daef0394d533a49b07773dc7f75b11, type: 2}
-  moneyToIncrease: 50
+  moneyToIncrease: 80
   scoreToAddINT: 1
 --- !u!61 &1728953968848947032
 BoxCollider2D:

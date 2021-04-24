@@ -207,12 +207,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transformToChangeZ: {fileID: 4706706947685605156}
-  timeBeforeShooting: 3
+  timeBeforeShooting: 2
   timeBtwChangeRotation: 0.05
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  turretCheckRadius: 7.6
+  turretCheckRadius: 7.2
   thisTransform: {fileID: 8241804516971141932}
   transformToBeAimedAt: {fileID: 0}
   firePlace: {fileID: 4629456501622299209}

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30fb26cbf5c8c634fa5977be6f58fb38, type: 3}
-  m_Name: Turret1HP
+  m_Script: {fileID: 11500000, guid: c5b8e4afad861dd44b9687dd73c324c2, type: 3}
+  m_Name: Turret3
   m_EditorClassIdentifier: 
-  baseTurretHealth: 25
-  decreaserMultiplier: 1
+  uiThingyNameToPool: Turret3
+  moneyThatCosts: 125

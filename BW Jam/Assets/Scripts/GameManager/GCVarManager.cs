@@ -9,6 +9,18 @@ public class GCVarManager : MonoBehaviour {
     public int score;
     public Text scoreTXT;
 
+    public GameObject mt;
+    
+    public int scoreToEnableMT;
+    public GameObject st;
+    public int scoreToEnableST;
+
+    bool stEnabled;
+    bool mtEnabled;
+
+    public float sIntensityT;
+    public float sTimeT;
+
     [Header ("Money")]
     public float money;
     public Text moneyTXT;
@@ -50,5 +62,28 @@ public class GCVarManager : MonoBehaviour {
         {
             PlayerPrefs.SetInt("HighScore", score);
         }
+        if(!stEnabled)
+        {
+            if(scoreToEnableST <= score)
+            {
+                st.SetActive(true);
+                stEnabled = true;
+                SShakeAndSFX();
+            }
+        }
+        if(!mtEnabled)
+        {
+            if(scoreToEnableMT <= score)
+            {
+                mt.SetActive(true);
+                mtEnabled = true;
+                SShakeAndSFX();
+            }
+        }
+    }
+
+    void SShakeAndSFX()
+    {
+        CinemachineShake.Instance.ShakeCamera (sIntensityT, sTimeT);
     }
 }

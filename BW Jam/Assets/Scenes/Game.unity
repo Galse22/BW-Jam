@@ -8646,12 +8646,12 @@ GameObject:
   - component: {fileID: 590735274}
   - component: {fileID: 590735275}
   m_Layer: 5
-  m_Name: Turret2 Stuff
+  m_Name: Strong Turret Stuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &590735274
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8666,11 +8666,11 @@ RectTransform:
   - {fileID: 223712480}
   - {fileID: 1308575210}
   m_Father: {fileID: 1601169762}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -46.578, y: -45.36583}
+  m_AnchoredPosition: {x: -46.578, y: -128.88585}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590735275
@@ -10364,12 +10364,12 @@ GameObject:
   - component: {fileID: 761911965}
   - component: {fileID: 761911966}
   m_Layer: 5
-  m_Name: Turret3 Stuff
+  m_Name: MultipleEs Turret Stuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &761911965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10384,11 +10384,11 @@ RectTransform:
   - {fileID: 670515226}
   - {fileID: 392287270}
   m_Father: {fileID: 1601169762}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -46.578, y: -128.88585}
+  m_AnchoredPosition: {x: -46.578, y: -45.36583}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &761911966
@@ -22734,10 +22734,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   scoreTXT: {fileID: 1608263476}
-  money: 10000
+  mt: {fileID: 761911964}
+  scoreToEnableMT: 20
+  st: {fileID: 590735273}
+  scoreToEnableST: 90
+  sIntensityT: 15
+  sTimeT: 2
+  money: 600
   moneyTXT: {fileID: 1401873435}
   sIntesityNoMoney: 5
-  sTimeNoMoney: 0.005
+  sTimeNoMoney: 0.01
 --- !u!114 &1363558376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22750,25 +22756,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca57caf873c6b04a9f4be62e9e89589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBtwSpawn: 7
-  minimumTime: 0.8
-  timeToDecrease: 0.4
+  timeBtwSpawn: 12
+  minimumTime: 0.5
+  timeToDecrease: 0.5
   gCVarManager: {fileID: 1363558374}
   enemyKillsToChangeTime: 4
   tDecreaserFloat:
+  - 1.21
+  - 2.01
+  - 3.01
+  - 4.01
+  - 5.01
   - 6.01
-  - 6.2
+  - 6.4
   tDecreaserFloatList:
+  - 0.04
+  - 0.05
+  - 0.07
+  - 0.1
   - 0.15
-  - 0.2
+  - 0.22
+  - 0.25
   timeBtwOneBossPerWaveIsDisabled: 1.5
   oddInt: 32
-  minToStartBoss: 3
+  minToStartBoss: 4
   oddChangerFloat:
-  - 0.91
-  - 1.2
+  - 0.51
+  - 1
+  - 1.5
   - 2
-  oddChangerInt: 020000000800000010000000
+  - 3
+  oddChangerInt: 0600000008000000100000001400000018000000
   placesToSpawnEnemy:
   - {fileID: 276706918}
   - {fileID: 1999065420}
@@ -26495,8 +26513,8 @@ RectTransform:
   m_LocalScale: {x: 1.7241378, y: 1.7241378, z: 1.7241378}
   m_Children:
   - {fileID: 1703884963}
-  - {fileID: 590735274}
   - {fileID: 761911965}
+  - {fileID: 590735274}
   m_Father: {fileID: 194164875}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29081,7 +29099,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784623978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1130407903}
@@ -34996,11 +35014,11 @@ PrefabInstance:
       objectReference: {fileID: 1363558374}
     - target: {fileID: 6368571188994106981, guid: b5535f195a6412849bc2f0e04b07bb55, type: 3}
       propertyPath: moneyTurret3
-      value: 80
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6368571188994106981, guid: b5535f195a6412849bc2f0e04b07bb55, type: 3}
       propertyPath: moneyTurret2
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 6368571189451026035, guid: b5535f195a6412849bc2f0e04b07bb55, type: 3}
       propertyPath: m_Name

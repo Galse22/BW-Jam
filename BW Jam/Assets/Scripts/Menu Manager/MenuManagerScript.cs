@@ -16,7 +16,6 @@ public class MenuManagerScript : MonoBehaviour {
     public void LoadScene1 () {
         FMODUnity.RuntimeManager.PlayOneShot(sfxString);
         SceneManager.LoadScene (1);
-        PlayerPrefs.SetInt("AdBlockPref", 1);
     }
 
     public void LoadScene2 () {

@@ -227,8 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e1612a9be5b9774ca0319b89bcd84d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBtwAttack: 4
-  dmgToDeal: 30
+  timeBtwAttack: 4.5
+  dmgToDeal: 15
   attackRadius: 3
   thisTransform: {fileID: 8241804516971141932}
   enemyLayerMask:

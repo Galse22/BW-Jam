@@ -12,5 +12,9 @@ public class AdBlockManagerScript : MonoBehaviour
         {
             SceneManager.LoadScene(4);
         }
+        else
+        {
+            PlayerPrefs.SetInt("AdBlockPref", 1);
+        }
     }
 }
