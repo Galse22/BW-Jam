@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SpaceScript : MonoBehaviour
 {
     bool usedSpace;
+    string sfxString = "event:/Turret Select";
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -16,6 +17,7 @@ public class SpaceScript : MonoBehaviour
     {
         if(Input.GetKey("space") && !usedSpace)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(sfxString);
             SceneManager.LoadScene(1);
             usedSpace = true;
         }

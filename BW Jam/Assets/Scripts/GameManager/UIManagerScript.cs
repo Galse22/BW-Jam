@@ -13,8 +13,11 @@ public class UIManagerScript : MonoBehaviour
 
     public GameObject[] borderArray;
 
+    string sfxString = "event:/Turret Select";
+
     void GeneralFunc(TurretUIScriptableObject newTurretScritableObject, int objToActivate)
     {
+        FMODUnity.RuntimeManager.PlayOneShot(sfxString, transform.position);
         turretManagerPlayerScript.ChangeScriptableObjects(newTurretScritableObject);
         foreach(GameObject border in borderArray)
         {

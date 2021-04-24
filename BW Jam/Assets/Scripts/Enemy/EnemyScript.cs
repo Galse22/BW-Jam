@@ -40,12 +40,12 @@ public class EnemyScript : MonoBehaviour
     }
 	private void OnEnable() {
         waypointIndex = 0;
-        health = baseHealth;
         transform.position = waypoints[waypointIndex].transform.position;
     }
 
     private void OnDisable() {
         ResetMaterial();
+        health = baseHealth;
     }
 	
 	// Update is called once per frame

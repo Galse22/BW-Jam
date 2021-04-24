@@ -14,8 +14,14 @@ public class SpawnerScript : MonoBehaviour
     public GCVarManager gCVarManager;
 
     public int enemyKillsToChangeTime;
-    int enemyKills;
+
+    public List<float> tDecreaserFloat;
+    public List<float> tDecreaserFloatList;
+
+    [Header("Boss Stuff")]
     public float timeBtwOneBossPerWaveIsDisabled;
+    public int oddInt;
+    public float minToStartBoss;
 
     public List<float> oddChangerFloat;
     public List<int> oddChangerInt;
@@ -30,21 +36,32 @@ public class SpawnerScript : MonoBehaviour
     int indexNumber;
 
     int forIndexNumber;
-
-    public int oddInt;
-    public float minToStartBoss;
     int oddIntInCode;
+    
+    int enemyKills;
     bool oddBool;
 
-    float lastFloat;
+    int lastFloat;
+    float floatToCopare;
     int lastInt;
+    int intToCompare;
 
     bool listChanged = true;
+
+    bool tDListChanged = true;
+
+    int tDLastFloat;
+    float tDFloatToCopare; 
+    // yes I know it's COMPARE not copare. I made a typo and dont feel like replacing my variables
+    int tDLastInt;
+    float tDOFToCompare;
 
     GameObject enemySpawned;
     EnemyScript enemyScript;
     bool shouldStartBoss;
     bool oneBossPerWave = true;
+    bool tDbool;
+    bool oddElseBool;
     void Start()
     {
         StartCoroutine("SpawnerCoroutine");
@@ -121,6 +138,11 @@ public class SpawnerScript : MonoBehaviour
         else
         {
             timeBtwSpawn = minimumTime;
+            if(oddElseBool == false || tDbool == false)
+            {
+                TimeDecreaserStuff();
+                BossOddStuff();
+            }
         }
     }
 
@@ -146,19 +168,63 @@ public class SpawnerScript : MonoBehaviour
         {
             oneBossPerWave = false;
         }
+        TimeDecreaserStuff();
+        BossOddStuff();
+    }
+
+    void TimeDecreaserStuff()
+    {
+        if(tDListChanged)
+        {
+            tDLastFloat = tDecreaserFloat.Count;
+            tDLastFloat--;
+            tDListChanged = false;
+        }
+        if(tDLastFloat > -1)
+        {
+            tDFloatToCopare = tDecreaserFloat[tDLastFloat];
+            if(tDFloatToCopare >= timeBtwSpawn)
+            {
+                tDLastInt = tDecreaserFloatList.Count;
+                tDLastInt--;
+                tDOFToCompare = tDecreaserFloatList[tDLastInt];
+                timeToDecrease = tDOFToCompare;
+                tDecreaserFloat.Remove(tDFloatToCopare);
+                tDecreaserFloatList.Remove(tDOFToCompare);
+                tDListChanged = true;
+            }
+        }
+        else
+        {
+            tDbool = true;
+        }
+    }
+
+    void BossOddStuff()
+    {
         if(listChanged)
         {
             lastFloat = oddChangerFloat.Count;
             lastFloat--;
+            listChanged = false;
         }
-        if(lastFloat >= timeBtwSpawn)
+        if(lastFloat > -1)
         {
-            lastInt = oddChangerInt.Count;
-            lastInt--;
-            oddInt = lastInt;
-            oddChangerFloat.Remove(lastFloat);
-            oddChangerInt.Remove(lastInt);
-            listChanged = true;
+            floatToCopare = oddChangerFloat[lastFloat];
+            if(floatToCopare >= timeBtwSpawn)
+            {
+                lastInt = oddChangerInt.Count;
+                lastInt--;
+                intToCompare = oddChangerInt[lastInt];
+                oddInt = intToCompare;
+                oddChangerFloat.Remove(floatToCopare);
+                oddChangerInt.Remove(intToCompare);
+                listChanged = true;
+            }
+        }
+        else
+        {
+            oddElseBool= true;
         }
     }
 }

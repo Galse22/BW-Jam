@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class MultipleEnemiesTurretScript : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class MultipleEnemiesTurretScript : MonoBehaviour
     {
         yield return new WaitForSeconds (timeBtwAttack);
         Collider2D[] enemyColArray = Physics2D.OverlapCircleAll (thisTransform.position, attackRadius, enemyLayerMask);
-        if(enemyColArray != null)
+        if(enemyColArray.Length != 0)
         {
             enemyArray = new GameObject[enemyColArray.Length];
             for (int i = 0; i < enemyColArray.Length; i++) {

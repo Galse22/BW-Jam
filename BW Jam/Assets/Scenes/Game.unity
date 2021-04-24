@@ -1984,7 +1984,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6368571189451026039, guid: b5535f195a6412849bc2f0e04b07bb55, type: 3}
   m_PrefabInstance: {fileID: 6368571189542953849}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6368571189542953850}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f781823fce02e744b367c5831322ffb, type: 3}
@@ -22750,15 +22750,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca57caf873c6b04a9f4be62e9e89589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBtwSpawn: 6
+  timeBtwSpawn: 7
   minimumTime: 0.8
-  timeToDecrease: 0.15
+  timeToDecrease: 0.4
   gCVarManager: {fileID: 1363558374}
   enemyKillsToChangeTime: 4
+  tDecreaserFloat:
+  - 6.01
+  - 6.2
+  tDecreaserFloatList:
+  - 0.15
+  - 0.2
   timeBtwOneBossPerWaveIsDisabled: 1.5
+  oddInt: 32
+  minToStartBoss: 3
   oddChangerFloat:
-  - 3
-  oddChangerInt: 10000000
+  - 0.91
+  - 1.2
+  - 2
+  oddChangerInt: 020000000800000010000000
   placesToSpawnEnemy:
   - {fileID: 276706918}
   - {fileID: 1999065420}
@@ -22792,8 +22802,6 @@ MonoBehaviour:
   - {fileID: 1585383644}
   - {fileID: 1564760981}
   - {fileID: 15377900}
-  oddInt: 32
-  minToStartBoss: 3
 --- !u!114 &1363558377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33196,6 +33204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d31c9ab492ed0542b269da50a9d8235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 6368571189542953850}
 --- !u!1001 &2079172668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35047,3 +35056,8 @@ PrefabInstance:
       objectReference: {fileID: 1363558376}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5535f195a6412849bc2f0e04b07bb55, type: 3}
+--- !u!1 &6368571189542953850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6368571189451026035, guid: b5535f195a6412849bc2f0e04b07bb55, type: 3}
+  m_PrefabInstance: {fileID: 6368571189542953849}
+  m_PrefabAsset: {fileID: 0}
