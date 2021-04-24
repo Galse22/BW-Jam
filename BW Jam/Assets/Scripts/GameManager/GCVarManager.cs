@@ -21,6 +21,8 @@ public class GCVarManager : MonoBehaviour {
     public float sIntensityT;
     public float sTimeT;
 
+    string unlockTurretSFX = "event:/Item Pickup";
+
     [Header ("Money")]
     public float money;
     public Text moneyTXT;
@@ -85,5 +87,6 @@ public class GCVarManager : MonoBehaviour {
     void SShakeAndSFX()
     {
         CinemachineShake.Instance.ShakeCamera (sIntensityT, sTimeT);
+        FMODUnity.RuntimeManager.PlayOneShot(unlockTurretSFX);
     }
 }

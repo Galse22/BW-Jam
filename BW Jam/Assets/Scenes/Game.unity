@@ -22657,6 +22657,7 @@ GameObject:
   - component: {fileID: 1363558376}
   - component: {fileID: 1363558377}
   - component: {fileID: 1363558378}
+  - component: {fileID: 1363558375}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -22738,12 +22739,24 @@ MonoBehaviour:
   scoreToEnableMT: 20
   st: {fileID: 590735273}
   scoreToEnableST: 90
-  sIntensityT: 15
-  sTimeT: 2
+  sIntensityT: 7
+  sTimeT: 0.5
   money: 600
   moneyTXT: {fileID: 1401873435}
   sIntesityNoMoney: 5
   sTimeNoMoney: 0.01
+--- !u!114 &1363558375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363558371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6497af91ac28fd429eea6426c7822d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1363558376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22757,36 +22770,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBtwSpawn: 12
-  minimumTime: 0.5
+  minimumTime: 0.1
   timeToDecrease: 0.5
   gCVarManager: {fileID: 1363558374}
   enemyKillsToChangeTime: 4
   tDecreaserFloat:
-  - 1.21
+  - 1.01
   - 2.01
   - 3.01
-  - 4.01
-  - 5.01
+  - 3.93
+  - 5.13
   - 6.01
-  - 6.4
+  - 6.51
   tDecreaserFloatList:
+  - 0.03
   - 0.04
-  - 0.05
   - 0.07
   - 0.1
   - 0.15
   - 0.22
   - 0.25
-  timeBtwOneBossPerWaveIsDisabled: 1.5
-  oddInt: 32
-  minToStartBoss: 4
+  timeBtwOneBossPerWaveIsDisabled: 1.01
+  oddInt: 1
+  minToStartBoss: 4.08
   oddChangerFloat:
-  - 0.51
+  - 0.5
   - 1
   - 1.5
   - 2
   - 3
-  oddChangerInt: 0600000008000000100000001400000018000000
+  - 3.93
+  oddChangerInt: 40000000180000001e000000240000003000000040000000
   placesToSpawnEnemy:
   - {fileID: 276706918}
   - {fileID: 1999065420}
@@ -35014,11 +35028,15 @@ PrefabInstance:
       objectReference: {fileID: 1363558374}
     - target: {fileID: 6368571188994106981, guid: b5535f195a6412849bc2f0e04b07bb55, type: 3}
       propertyPath: moneyTurret3
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6368571188994106981, guid: b5535f195a6412849bc2f0e04b07bb55, type: 3}
       propertyPath: moneyTurret2
-      value: 75
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368571189451026034, guid: b5535f195a6412849bc2f0e04b07bb55, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6368571189451026035, guid: b5535f195a6412849bc2f0e04b07bb55, type: 3}
       propertyPath: m_Name

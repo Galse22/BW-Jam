@@ -10,7 +10,7 @@ public class MusicManager : MonoBehaviour
     FMOD.Studio.EventInstance instance;
     
 
-    public int dangerMeter = 1;
+    public int dangerMeter = 0;
     bool audioResumed;
     bool playerInput;
     
@@ -46,11 +46,9 @@ public class MusicManager : MonoBehaviour
     IEnumerator WaitSecondsAudio()
     {
         ResumeAudio();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3.01f);
         instance = FMODUnity.RuntimeManager.CreateInstance(music);
         instance.start();
-        yield return new WaitForSeconds(3);
-        instance.setParameterByName("Danger", dangerMeter);
     }
 
     

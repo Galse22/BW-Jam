@@ -581,12 +581,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7964185983008170246, guid: 41398da5b0d623a4ca369e192488ca3d, type: 3}
       propertyPath: m_Text
-      value: If you have adblock, please reload the page. Sounds and music will not
-        play if you do not reload and have adblock.
+      value: PLEASE RELOAD THE PAGE TWICE TO HEAR THE MUSIC AND SFXS. WE ARE USING
+        FMOD AND WEBGL + FMOD IS A BUGGY MESS. SORRY FOR THE INCOVENIENCE. ( IF YOU
+        DO NOT WANT TO RELOAD THE PAGE, JUST PRESS THE "CONTINUE" BUTTON.
       objectReference: {fileID: 0}
     - target: {fileID: 7964185983008170246, guid: 41398da5b0d623a4ca369e192488ca3d, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 58
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41398da5b0d623a4ca369e192488ca3d, type: 3}

@@ -35,6 +35,9 @@ public class EnemyScript : MonoBehaviour
 
     public int scoreToAddINT;
 
+    public Transform healthBar;
+    float healthDivided;
+
 	private void Start() {
         spawnerScript = GameObject.FindWithTag("GameController").GetComponent<SpawnerScript>();
     }
@@ -46,6 +49,10 @@ public class EnemyScript : MonoBehaviour
     private void OnDisable() {
         ResetMaterial();
         health = baseHealth;
+        if(healthBar != null)
+        {
+            healthBar.localScale = new Vector3 (1, 1);
+        }
     }
 	
 	// Update is called once per frame
@@ -97,6 +104,11 @@ public class EnemyScript : MonoBehaviour
             health -= damageTaken;
             rend.material = whiteMat;
             Invoke("ResetMaterial", timeToResetMaterial);
+            if(healthBar != null)
+            {
+                healthDivided = health / baseHealth;
+                healthBar.localScale = new Vector3 (healthDivided, 1);
+            }
         }
         else
         {

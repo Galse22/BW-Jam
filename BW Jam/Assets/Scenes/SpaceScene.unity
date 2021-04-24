@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: 'event:/tower defence for FMOD '
-  dangerMeter: 1
+  dangerMeter: 0
 --- !u!114 &365661608
 MonoBehaviour:
   m_ObjectHideFlags: 0

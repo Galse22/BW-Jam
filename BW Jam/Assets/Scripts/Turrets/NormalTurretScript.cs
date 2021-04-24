@@ -74,35 +74,4 @@ public class NormalTurretScript : MonoBehaviour {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(thisTransform.position, turretCheckRadius);
     }
-
-        //     public Transform[] enemyArray;
-
-        // Collider2D[] enemyColArray = Physics2D.OverlapCircleAll (thisTransform.position, turretCheckRadius, enemyLayerMask);
-        // enemyArray = new Transform[enemyColArray.Length];
-        // for (int i = 0; i < enemyColArray.Length; i++) {
-        //     enemyArray[i] = enemyColArray[i].transform;
-        // }
-        // bestEnemy = GetClosestEnemy (enemyArray);
-        //         if (bestEnemy != null) {
-        //     directionAim = (bestEnemy.position - thisTransform.position);
-        //     angleEnemy = Mathf.Atan2 (directionAim.y, directionAim.x) * Mathf.Rad2Deg;
-        //     if (angleEnemy < 0.0f) angleEnemy += 360.0f;
-        //     transformToChangeZ.eulerAngles = new Vector3 (0, 0, angleEnemy);
-        // }
-
-    // Transform GetClosestEnemy (Transform[] enemies) {
-    //     Transform bestTarget = null;
-    //     float closestDistanceSqr = Mathf.Infinity;
-    //     Vector3 currentPosition = transform.position;
-    //     foreach (Transform potentialTarget in enemies) {
-    //         Vector3 directionToTarget = potentialTarget.position - currentPosition;
-    //         float dSqrToTarget = directionToTarget.sqrMagnitude;
-    //         if (dSqrToTarget < closestDistanceSqr) {
-    //             closestDistanceSqr = dSqrToTarget;
-    //             bestTarget = potentialTarget;
-    //         }
-    //     }
-
-    //     return bestTarget;
-    // }
 }
