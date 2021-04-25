@@ -87,7 +87,13 @@ public class MidDamageScript : MonoBehaviour {
 
     public void TakeDamageHeart () {
         BothMidAndHeart ();
+        musicManager.P3D ();
         FMODUnity.RuntimeManager.PlayOneShot (SmallDmgEvent, transform.position);
+    }
+
+    public void CallMusicFunc()
+    {
+        musicManager.IncreaseDanger ();
     }
 
     void BothMidAndHeart () {
@@ -100,7 +106,6 @@ public class MidDamageScript : MonoBehaviour {
             enemy.SetActive (false);
         }
         CinemachineShake.Instance.ShakeCamera (sIntensity, sTime);
-        musicManager.IncreaseDanger ();
         gCVarManager.ChangeMoney(moneyToIncreaseOnLostHealth);
     }
 

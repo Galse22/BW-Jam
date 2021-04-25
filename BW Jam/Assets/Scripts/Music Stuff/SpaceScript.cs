@@ -15,7 +15,7 @@ public class SpaceScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey("space") && !usedSpace)
+        if(Input.GetKeyDown("space") && !usedSpace)
         {
             FMODUnity.RuntimeManager.PlayOneShot(sfxString);
             SceneManager.LoadScene(1);

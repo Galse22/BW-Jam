@@ -62,6 +62,8 @@ public class SpawnerScript : MonoBehaviour
     bool oneBossPerWave = true;
     bool tDbool;
     bool oddElseBool;
+
+    bool otherOddBool;
     void Start()
     {
         StartCoroutine("SpawnerCoroutine");
@@ -89,7 +91,14 @@ public class SpawnerScript : MonoBehaviour
             }
             else
             {
-                if(oddBool == false && oddIntInCode == 1 && shouldStartBoss)
+                if(oddInt == 1  && oddBool == false && shouldStartBoss && !otherOddBool)
+                {
+                    oddInt = 1024;
+                    oddBool = true;
+                    otherOddBool = true;
+                    enemySpawned = ObjectPooler.SharedInstance.GetPooledObject("BigEnemy");
+                }
+                else if(oddBool == false && oddIntInCode == 1 && shouldStartBoss)
                 {
                     oddBool = true;
                     enemySpawned = ObjectPooler.SharedInstance.GetPooledObject("BigEnemy");

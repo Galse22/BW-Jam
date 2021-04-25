@@ -31,6 +31,8 @@ public class GCVarManager : MonoBehaviour {
     public float sIntesityNoMoney;
     public float sTimeNoMoney;
 
+    string nMoneyS = "event:/No Money";
+
     private void Start() {
         moneyTXT.text = "Money: " + money.ToString ();
     }
@@ -45,7 +47,7 @@ public class GCVarManager : MonoBehaviour {
         }
         else
         {
-            // must create SFX
+            FMODUnity.RuntimeManager.PlayOneShot(nMoneyS);
             CinemachineShake.Instance.ShakeCamera (sIntesityNoMoney, sTimeNoMoney);
             return false;
         }

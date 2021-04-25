@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002724DB7EBD8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001C4989A0AC8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,9 +15,646 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000AA4C0F298
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC773A7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC773A7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC773A7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC773A7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C412BE6318
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Player repair', format=5, channels=2, frequency=48000, lengthbytes=6720, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.098877.
+[LOG] SoundI::release                          :  (000001C491B269E8)
+[LOG] SoundI::release                          :     Player repair (000001C42CD2AA98)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000AA4C0F298
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC773A7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC773A7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC773A7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC773A7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C412BE7188
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Player repair', format=5, channels=2, frequency=48000, lengthbytes=6720, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.098877.
+[LOG] SoundI::release                          :  (000001C491B26CC8)
+[LOG] SoundI::release                          :     Player repair (000001C42CD2A418)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000AA4C0F298
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC773A7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC773A7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC773A7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC773A7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C412BE8838
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Player repair', format=5, channels=2, frequency=48000, lengthbytes=6720, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.098877.
+[LOG] SoundI::release                          :  (000001C491B26148)
+[LOG] SoundI::release                          :     Player repair (000001C42CD29A58)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000AA4C0F298
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC773A7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC773A7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC773A7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC773A7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C412BE8418
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Player repair', format=5, channels=2, frequency=48000, lengthbytes=6720, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.098877.
+[LOG] SoundI::release                          :  (000001C491B26428)
+[LOG] SoundI::release                          :     Player repair (000001C42CD2A418)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000AA4C0F298
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC773A7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC773A7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC773A7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC773A7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C412BEAF68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Player repair', format=5, channels=2, frequency=48000, lengthbytes=6720, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.098877.
+[LOG] SoundI::release                          :  (000001C491B26CC8)
+[LOG] SoundI::release                          :     Player repair (000001C42CD2A418)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000AA4C0F298
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC773A7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC773A7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC773A7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC773A7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C412BE5EF8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Player repair', format=5, channels=2, frequency=48000, lengthbytes=6720, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.098877.
+[LOG] SoundI::release                          :  (000001C491B26CC8)
+[LOG] SoundI::release                          :     Player repair (000001C42CD29A58)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000AA4C0F298
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC773A7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC773A7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC773A7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC773A7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C412BEBFE8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Player repair', format=5, channels=2, frequency=48000, lengthbytes=6720, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.098877.
+[LOG] SoundI::release                          :  (000001C491B26CC8)
+[LOG] SoundI::release                          :     Player repair (000001C42CD2AA98)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C49BB5BC48
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C49BB5BC48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C49BB5BC48
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C49BB5BC48
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C49850BDB8 : node = 000001C42993B220
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C429AB3198.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C49850BDB8
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C49850B548 : node = 000001C42993B4A0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C429AB3198.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C42993B330
+[LOG] SystemI::createSound                     :     filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C49850B8A8 : node = 000001C42993B720
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C429AB3198.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Danger guitar ', format=5, channels=2, frequency=48000, lengthbytes=351744, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.175947.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C49850BDB8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C49850B548
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C42993B5B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 23256
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Danger hats', format=5, channels=2, frequency=48000, lengthbytes=656544, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.013018.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C49850B548
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C49850B8A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C42993B830
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tower defence Quieter  (1)', format=5, channels=2, frequency=48000, lengthbytes=1884960, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562943.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C49850B8A8
+[LOG] SoundI::release                          : tower defence Quieter  (1) (000001C42C669908)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (000001C42CD2ADD8)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (000001C49BB5BC48)
+[LOG] SoundI::release                          : tower defence Danger layer 2 (000001C42C669248)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (000001C42CD29238)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (000001C49BB5BDF8)
+[LOG] SoundI::release                          : Danger guitar  (000001C491776098)
+[LOG] SoundI::release                          :     Danger guitar  (000001C42CD2A8F8)
+[LOG] SoundI::release                          :     Danger guitar  (000001C49BB5B8E8)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C4A1E53428
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C4A1E53428
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C498A52938 : node = 000001C429790280
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C429AB3198.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C498A52938
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C429790390
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tower defence Danger layer 2', format=5, channels=2, frequency=48000, lengthbytes=1620352, lengthpcm=7238230, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.026404.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C498A52938
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C498A571C8 : node = 000001C429790F00
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C429AB3198.  list count = 0
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C498A58608 : node = 000001C4297908C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C429AB3198.  list count = 1
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C498A571C8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C429791010
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 84943
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C498A56298 : node = 000001C42978F4C0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C429AB3198.  list count = 1
+[LOG] SystemI::createSound                     :     filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C498A53508 : node = 000001C429790A00
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C429AB3198.  list count = 2
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Danger guitar ', format=5, channels=2, frequency=48000, lengthbytes=351744, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.175947.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C498A571C8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C498A58608
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C4297909D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 108200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Danger hats', format=5, channels=2, frequency=48000, lengthbytes=656544, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.013018.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C498A58608
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C498A56298
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C42978F5D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 84943
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tower defence Quieter  (1)', format=5, channels=2, frequency=48000, lengthbytes=1884960, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562943.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C498A56298
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C498A53508
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C429790B10
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 52240
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tower defence Danger layer 2', format=5, channels=2, frequency=48000, lengthbytes=1620352, lengthpcm=7238230, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.026404.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C498A53508
+[LOG] SoundI::release                          : tower defence Danger layer 2 (000001C498A52938)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (000001C42CD29238)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (000001C4A1E53938)
+[LOG] SoundI::release                          : Danger hats (000001C49850B548)
+[LOG] SoundI::release                          :     Danger hats (000001C42CD2AA98)
+[LOG] SoundI::release                          :     Danger hats (000001C4A1E530C8)
+[LOG] SoundI::release                          : Danger guitar  (000001C49850BDB8)
+[LOG] SoundI::release                          :     Danger guitar  (000001C42CD2A418)
+[LOG] SoundI::release                          :     Danger guitar  (000001C4A1E53788)
+[LOG] SoundI::release                          : tower defence Quieter  (1) (000001C49850B8A8)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (000001C42CD29A58)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (000001C4A1E53428)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000AA508F618
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC773A7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC773A7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC773A7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC773A7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C412BE8418
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='No Money', format=5, channels=2, frequency=48000, lengthbytes=20000, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.278381.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000AA508F618
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC773A7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC773A7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC773A7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC773A7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C412BED068
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Enemy Death', format=5, channels=2, frequency=48000, lengthbytes=6368, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.174194.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C4A1E53C98
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C4A1E53C98
+[LOG] SoundI::release                          : Danger hats (000001C498A58608)
+[LOG] SoundI::release                          :     Danger hats (000001C42CD29BF8)
+[LOG] SoundI::release                          :     Danger hats (000001C4A1E53AE8)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000AA508F618
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC773A7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC773A7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC773A7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC773A7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C412BECE58
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Exposion 1', format=5, channels=2, frequency=48000, lengthbytes=4384, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.194733.
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C49850B6F8 : node = 000001C42E2B9450
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C429AB3198.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C49850B6F8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C42E2B9560
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C49850B8A8 : node = 000001C42E2B96D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C429AB3198.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C42E3C7748 : node = 000001C42E2B91D0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C429AB3198.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Danger guitar ', format=5, channels=2, frequency=48000, lengthbytes=351744, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.175947.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C49850B6F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C49850B8A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C42E2B97E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 23256
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Danger hats', format=5, channels=2, frequency=48000, lengthbytes=656544, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.013018.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C49850B8A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C42E3C7748
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C42E2B92E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tower defence Quieter  (1)', format=5, channels=2, frequency=48000, lengthbytes=1884960, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562943.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C42E3C7748
+[LOG] SoundI::release                          : tower defence Danger layer 2 (000001C498A53508)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (000001C42CD2ADD8)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (000001C429E21248)
+[LOG] SoundI::release                          : Danger guitar  (000001C498A571C8)
+[LOG] SoundI::release                          :     Danger guitar  (000001C42CD2A758)
+[LOG] SoundI::release                          :     Danger guitar  (000001C4A1E53278)
+[LOG] SoundI::release                          : tower defence Quieter  (1) (000001C498A56298)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (000001C42CD2A8F8)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (000001C4A1E53C98)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C498A57378
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C498A57378
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C498A60A08 : node = 000001C42E2B9310
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C429AB3198.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C498A60A08
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C42E2B9420
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tower defence Danger layer 2', format=5, channels=2, frequency=48000, lengthbytes=1620352, lengthpcm=7238230, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.026404.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C498A60A08
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C498A57378
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C498A57378
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C49850B548 : node = 000001C42E2B9090
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C429AB3198.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C49850B548
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSound                     :     filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C498A610C8 : node = 000001C42E2B9590
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C429AB3198.  list count = 0
+[LOG] SystemI::createSound                     :     filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C42E2B91A0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 84943
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C498A60348 : node = 000001C4A359DC30
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C429AB3198.  list count = 1
+[LOG] SystemI::createSound                     :     filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C412882008 : node = 000001C4A359D870
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C429AB3198.  list count = 2
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Danger guitar ', format=5, channels=2, frequency=48000, lengthbytes=351744, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.175947.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C49850B548
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C498A610C8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C42E2B96A0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 108200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Danger hats', format=5, channels=2, frequency=48000, lengthbytes=656544, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.013018.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C498A610C8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C498A60348
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C4A359DD40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 84943
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tower defence Quieter  (1)', format=5, channels=2, frequency=48000, lengthbytes=1884960, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562943.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C498A60348
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C412882008
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C4A359D980
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 52240
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tower defence Danger layer 2', format=5, channels=2, frequency=48000, lengthbytes=1620352, lengthpcm=7238230, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.026404.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C412882008
+[LOG] SoundI::release                          : tower defence Danger layer 2 (000001C498A60A08)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (000001C4A1D10D38)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (000001C498A587B8)
+[LOG] SoundI::release                          : Danger hats (000001C49850B8A8)
+[LOG] SoundI::release                          :     Danger hats (000001C42CD29238)
+[LOG] SoundI::release                          :     Danger hats (000001C498A53BC8)
+[LOG] SoundI::release                          : Danger guitar  (000001C49850B6F8)
+[LOG] SoundI::release                          :     Danger guitar  (000001C42CD2A418)
+[LOG] SoundI::release                          :     Danger guitar  (000001C498A556C8)
+[LOG] SoundI::release                          : tower defence Quieter  (1) (000001C42E3C7748)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (000001C4A1D11078)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (000001C498A57378)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000AA508F618
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC773A7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC773A7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC773A7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC773A7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C49833F2D8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Big fire', format=5, channels=2, frequency=48000, lengthbytes=8032, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.194763.
+[LOG] SoundI::release                          : Danger hats (000001C498A610C8)
+[LOG] SoundI::release                          :     Danger hats (000001C4A1D101D8)
+[LOG] SoundI::release                          :     Danger hats (000001C498A57528)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C4A1038C48 : node = 000001C49B93E0A0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C429AB3198.  list count = 0
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C4A1038C48
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C4A1038FA8 : node = 000001C49B93E6E0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C429AB3198.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSound                     :     filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C4A1039308 : node = 000001C49B93E1E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C49B93E1B0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C429AB3198.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Danger guitar ', format=5, channels=2, frequency=48000, lengthbytes=351744, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.175947.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C4A1038C48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C4A1038FA8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C49B93E7F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 23256
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Danger hats', format=5, channels=2, frequency=48000, lengthbytes=656544, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.013018.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C4A1038FA8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C4A1039308
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C49B93E2F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tower defence Quieter  (1)', format=5, channels=2, frequency=48000, lengthbytes=1884960, lengthpcm=7340176, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562943.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C4A1039308
+[LOG] SoundI::release                          : Danger guitar  (000001C49850B548)
+[LOG] SoundI::release                          :     Danger guitar  (000001C4A1D0FCF8)
+[LOG] SoundI::release                          :     Danger guitar  (000001C498A53A18)
+[LOG] SoundI::release                          : tower defence Danger layer 2 (000001C412882008)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (000001C4A1D0E498)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (000001C498A55878)
+[LOG] SoundI::release                          : tower defence Quieter  (1) (000001C498A60348)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (000001C4A1D0DAD8)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (000001C498A53F28)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C49255A6E8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C49255A6E8
+[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C498A606A8 : node = 000001C412881E70
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C429AB3198.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C498A606A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff\Tower Defence/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4987968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22016
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C412881F80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tower defence Danger layer 2', format=5, channels=2, frequency=48000, lengthbytes=1620352, lengthpcm=7238230, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.026404.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C498A606A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C49255A538
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C49255A538
+[LOG] SoundI::release                          : tower defence Danger layer 2 (000001C498A606A8)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (000001C4A1D0D938)
+[LOG] SoundI::release                          :     tower defence Danger layer 2 (000001C49255A028)
+[LOG] SoundI::release                          : tower defence Quieter  (1) (000001C4A1039308)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (000001C4A1D10B98)
+[LOG] SoundI::release                          :     tower defence Quieter  (1) (000001C49255A6E8)
+[LOG] SoundI::release                          : Danger hats (000001C4A1038FA8)
+[LOG] SoundI::release                          :     Danger hats (000001C4A1D11078)
+[LOG] SoundI::release                          :     Danger hats (000001C49255A538)
+[LOG] SoundI::release                          : Danger guitar  (000001C4A1038C48)
+[LOG] SoundI::release                          :     Danger guitar  (000001C4A1D0DC78)
+[LOG] SoundI::release                          :     Danger guitar  (000001C49255A388)
+[LOG] SoundI::release                          :  (000001C49272DF18)
+[LOG] SoundI::release                          :     Item Pickup (000001C42CD293D8)
+[LOG] SoundI::release                          :  (000001C491B26598)
+[LOG] SoundI::release                          :     No Money (000001C42CD2AA98)
+[LOG] SoundI::release                          :  (000001C498A09AA8)
+[LOG] SoundI::release                          :     Turret Select (000001C42CD2AC38)
+[LOG] SoundI::release                          :  (000001C491B26CC8)
+[LOG] SoundI::release                          :     Exposion 1 (000001C42CD29BF8)
+[LOG] SoundI::release                          :  (000001C4989F4C88)
+[LOG] SoundI::release                          :     Player repair 2 (000001C42CD2A278)
+[LOG] SoundI::release                          :  (000001C4989F4F68)
+[LOG] SoundI::release                          :     Small fire (000001C42CD29D98)
+[LOG] SoundI::release                          :  (000001C49272E7B8)
+[LOG] SoundI::release                          :     Player repair (000001C42CD29098)
+[LOG] SoundI::release                          :  (000001C49272EC08)
+[LOG] SoundI::release                          :     Enemy Death_1 (000001C42CD2A5B8)
+[LOG] SoundI::release                          :  (000001C491B26878)
+[LOG] SoundI::release                          :     Enemy Death (000001C42CD29A58)
+[LOG] SoundI::release                          :  (000001C4989F4DF8)
+[LOG] SoundI::release                          :     Big fire (000001C4A1D10ED8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -25,3 +662,12 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

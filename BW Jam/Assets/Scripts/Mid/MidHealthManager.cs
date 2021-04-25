@@ -5,6 +5,7 @@ using UnityEngine;
 public class MidHealthManager : MonoBehaviour
 {
     public int health = 4;
+    int oldHealth;
 
     public int dmgType;
     public MidDamageScript midDamageScript;
@@ -49,13 +50,14 @@ public class MidHealthManager : MonoBehaviour
         }
     }
     private void OnTriggerEnter2D(Collider2D col) {
-        if (col.gameObject.tag == "Enemy" && !lost) {
+        if (col.gameObject.tag == "Enemy" && col.gameObject.layer == 9 && !lost) {
             col.gameObject.SetActive(false);
             health--;
             anim.SetTrigger("lostHealth");
             if(health == 0 || health == -1 || health == -2)
             {
                 midDamageScript.MidTakeDamage(dmgType);
+                midDamageScript.CallMusicFunc();
                 lost = true;
                 healthBarGO.SetActive(true);
                 currentHealth = 0.1f;
@@ -66,6 +68,41 @@ public class MidHealthManager : MonoBehaviour
             else
             {
                 midDamageScript.MidTakeDamage(0);
+            }
+        }
+        else if(col.gameObject.tag == "Enemy" && col.gameObject.layer == 10)
+        {
+            anim.SetTrigger("set0");
+            oldHealth = health;
+            health = 0;
+            midDamageScript.MidTakeDamage(dmgType);
+            lost = true;
+            healthBarGO.SetActive(true);
+            currentHealth = 0.1f;
+            healthDivided = currentHealth / healthNeeded;
+            ScaleHealthBarFunc();
+            SetAlpha(0.8f);
+            if(oldHealth == 4)
+            {
+                midDamageScript.CallMusicFunc();
+                midDamageScript.CallMusicFunc();
+                midDamageScript.CallMusicFunc();
+                midDamageScript.CallMusicFunc();
+            }
+            else if(oldHealth == 3)
+            {
+                midDamageScript.CallMusicFunc();
+                midDamageScript.CallMusicFunc();
+                midDamageScript.CallMusicFunc();
+            }
+            else if(oldHealth == 2)
+            {
+                midDamageScript.CallMusicFunc();
+                midDamageScript.CallMusicFunc();
+            }
+            else if(oldHealth == 1)
+            {
+                midDamageScript.CallMusicFunc();
             }
         }
     }

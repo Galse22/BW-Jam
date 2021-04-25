@@ -233,7 +233,7 @@ MonoBehaviour:
   thisTransform: {fileID: 8241804516971141932}
   enemyLayerMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1536
   sfxString: event:/Weapon Fire Large
 --- !u!61 &5833379965570134608
 BoxCollider2D:
@@ -332,7 +332,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 729873f3a917d6d44bcd456a13328b75, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02419b5240099354abafc2c3d18ac907, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

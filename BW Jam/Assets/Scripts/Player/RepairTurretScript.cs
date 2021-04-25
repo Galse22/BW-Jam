@@ -119,6 +119,12 @@ public class RepairTurretScript : MonoBehaviour
         repairedGOstList.Remove(goToBeRemoved);
     }
 
+    public void RepairedFunc(GameObject goToAddList)
+    {
+        repairedGOstList.Add(goToAddList);
+        StartCoroutine("RemoveFromListIE", goToAddList);
+    }
+
     void SpeedBoost()
     {
         playerShmovement.moveSpeed = baseMoveSpeedPlayer;

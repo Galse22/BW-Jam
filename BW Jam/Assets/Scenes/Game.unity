@@ -8666,11 +8666,11 @@ RectTransform:
   - {fileID: 223712480}
   - {fileID: 1308575210}
   m_Father: {fileID: 1601169762}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -46.578, y: -128.88585}
+  m_AnchoredPosition: {x: -46.578, y: -45.36583}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590735275
@@ -10384,11 +10384,11 @@ RectTransform:
   - {fileID: 670515226}
   - {fileID: 392287270}
   m_Father: {fileID: 1601169762}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -46.578, y: -45.36583}
+  m_AnchoredPosition: {x: -46.578, y: -128.88585}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &761911966
@@ -22736,9 +22736,9 @@ MonoBehaviour:
   score: 0
   scoreTXT: {fileID: 1608263476}
   mt: {fileID: 761911964}
-  scoreToEnableMT: 20
+  scoreToEnableMT: 200
   st: {fileID: 590735273}
-  scoreToEnableST: 90
+  scoreToEnableST: 75
   sIntensityT: 7
   sTimeT: 0.5
   money: 600
@@ -22770,7 +22770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBtwSpawn: 12
-  minimumTime: 0.1
+  minimumTime: 0.25
   timeToDecrease: 0.5
   gCVarManager: {fileID: 1363558374}
   enemyKillsToChangeTime: 4
@@ -22800,7 +22800,7 @@ MonoBehaviour:
   - 2
   - 3
   - 3.93
-  oddChangerInt: 80000000180000001e000000240000003000000040000000
+  oddChangerInt: 10000000180000001e000000240000003400000040000000
   placesToSpawnEnemy:
   - {fileID: 276706918}
   - {fileID: 1999065420}
@@ -26527,8 +26527,8 @@ RectTransform:
   m_LocalScale: {x: 1.7241378, y: 1.7241378, z: 1.7241378}
   m_Children:
   - {fileID: 1703884963}
-  - {fileID: 761911965}
   - {fileID: 590735274}
+  - {fileID: 761911965}
   m_Father: {fileID: 194164875}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -35018,6 +35018,10 @@ PrefabInstance:
       propertyPath: tutorialTXTGo
       value: 
       objectReference: {fileID: 1375957844}
+    - target: {fileID: 6368571188994106978, guid: b5535f195a6412849bc2f0e04b07bb55, type: 3}
+      propertyPath: repairTurretScript
+      value: 
+      objectReference: {fileID: 565789980}
     - target: {fileID: 6368571188994106980, guid: b5535f195a6412849bc2f0e04b07bb55, type: 3}
       propertyPath: heartHealthScript
       value: 

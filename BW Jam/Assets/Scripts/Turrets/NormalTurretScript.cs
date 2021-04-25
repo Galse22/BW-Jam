@@ -7,6 +7,8 @@ public class NormalTurretScript : MonoBehaviour {
     public float timeBeforeShooting;
     public float timeBtwChangeRotation;
     public LayerMask enemyLayerMask;
+
+    public LayerMask bigEnemyLayerMask;
     public float turretCheckRadius;
 
     float angleEnemy;
@@ -52,7 +54,7 @@ public class NormalTurretScript : MonoBehaviour {
 
     void GetEnemy (bool shouldSetGo) {
         bestEnemy = null;
-        Collider2D enemyColArray = Physics2D.OverlapCircle (thisTransform.position, turretCheckRadius, enemyLayerMask);
+        Collider2D enemyColArray = Physics2D.OverlapCircle (thisTransform.position, turretCheckRadius, bigEnemyLayerMask);
         if(enemyColArray != null)
         {
             bestEnemy = enemyColArray.transform;
@@ -65,13 +67,21 @@ public class NormalTurretScript : MonoBehaviour {
                 transformToBeAimedAt = bestEnemy;
             }
         }
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        // IMPORTANT: REMOVE ON FINAL BUILD
-        // useful to balance radius
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(thisTransform.position, turretCheckRadius);
+        else
+        {
+            Collider2D enemyColArray2 = Physics2D.OverlapCircle (thisTransform.position, turretCheckRadius, enemyLayerMask);
+            if(enemyColArray2 != null)
+            {
+                bestEnemy = enemyColArray2.transform;
+                directionAim = (bestEnemy.position - thisTransform.position);
+                angleEnemy = Mathf.Atan2 (directionAim.y, directionAim.x) * Mathf.Rad2Deg;
+                if (angleEnemy < 0.0f) angleEnemy += 360.0f;
+                transformToChangeZ.eulerAngles = new Vector3 (0, 0, angleEnemy);
+                if(shouldSetGo)
+                {
+                    transformToBeAimedAt = bestEnemy;
+                }
+            }
+        }
     }
 }

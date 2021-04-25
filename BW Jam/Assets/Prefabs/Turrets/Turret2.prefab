@@ -207,11 +207,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transformToChangeZ: {fileID: 4706706947685605156}
-  timeBeforeShooting: 5
+  timeBeforeShooting: 12.5
   timeBtwChangeRotation: 0.05
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512
+  bigEnemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   turretCheckRadius: 10.2
   thisTransform: {fileID: 8241804516971141932}
   transformToBeAimedAt: {fileID: 0}
@@ -315,7 +318,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 729873f3a917d6d44bcd456a13328b75, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02419b5240099354abafc2c3d18ac907, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

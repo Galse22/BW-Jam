@@ -9,42 +9,51 @@ public class NormalBulletScript : MonoBehaviour {
 
     int enableInt;
 
+    float maxTimeOnField = 8.2f;
+    float timeOnField;
+
     private void OnDisable () {
         targetPos = null;
+        timeOnField = 0;
     }
 
     private void OnEnable() {
         if(enableInt != 0)
         {
-            Invoke("StartCC", 0.3f);
+            Invoke("StartTimeIV", 0.3f);
         }
         else
         {
             enableInt++;
         }
     }
+
     void Update () {
         if (targetPos != null) {
             transform.position = Vector2.MoveTowards (transform.position, targetPos.position, speed * Time.deltaTime);
         }
     }
 
-    void StartCC()
+    void StartTimeIV()
     {
         if(this.gameObject.activeInHierarchy)
         {
-            StartCoroutine("checkEnemyCoroutine");
+            StartCoroutine("checkTime");
         }
     }
 
-    IEnumerator checkEnemyCoroutine()
+    IEnumerator checkTime()
     {
         yield return new WaitForSeconds(0.2f);
-        if(targetPos == null)
+        timeOnField += 0.21f;
+        if(timeOnField >= maxTimeOnField)
         {
             this.gameObject.SetActive(false);
         }
-        StartCoroutine("checkEnemyCoroutine");
+        if(this.gameObject.activeInHierarchy)
+        {
+            StartCoroutine("checkTime");
+        }
     }
 
     private void OnTriggerEnter2D (Collider2D col) {

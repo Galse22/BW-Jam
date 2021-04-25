@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TurretManagerPlayerScript : MonoBehaviour
 {
+    public RepairTurretScript repairTurretScript;
     public GameObject currentSpot;
     GameObject curTurretPooled;
     public TurretUIScriptableObject turretUIScriptableObject;
@@ -87,6 +88,7 @@ public class TurretManagerPlayerScript : MonoBehaviour
         turret1.transform.position = currentSpot.transform.position;                
         turret1.transform.SetParent(currentSpot.transform);
         turret1.SetActive(true);
+        repairTurretScript.RepairedFunc(turret1);
         currentSpot = null;
         FMODUnity.RuntimeManager.PlayOneShot(sfxBuild, transform.position);
     }

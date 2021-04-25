@@ -23,14 +23,6 @@ public class MultipleEnemiesTurretScript : MonoBehaviour
         enableInt++;
     }
 
-    void OnDrawGizmosSelected()
-    {
-        // IMPORTANT: REMOVE ON FINAL BUILD
-        // useful to balance radius
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(thisTransform.position, attackRadius);
-    }
-
     IEnumerator checkForEnemies()
     {
         yield return new WaitForSeconds (timeBtwAttack);
