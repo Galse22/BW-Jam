@@ -5352,7 +5352,7 @@ MonoBehaviour:
   dmgType: 2
   midDamageScript: {fileID: 1363558377}
   isOnRange: 0
-  healthNeeded: 20
+  healthNeeded: 45
   isX: 0
 --- !u!95 &325993090
 Animator:
@@ -12903,7 +12903,7 @@ MonoBehaviour:
   dmgType: 3
   midDamageScript: {fileID: 1363558377}
   isOnRange: 0
-  healthNeeded: 20
+  healthNeeded: 45
   isX: 1
 --- !u!95 &923087883
 Animator:
@@ -22770,7 +22770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBtwSpawn: 12
-  minimumTime: 0.25
+  minimumTime: 0.4
   timeToDecrease: 0.5
   gCVarManager: {fileID: 1363558374}
   enemyKillsToChangeTime: 4
@@ -24019,7 +24019,7 @@ MonoBehaviour:
   dmgType: 1
   midDamageScript: {fileID: 1363558377}
   isOnRange: 0
-  healthNeeded: 20
+  healthNeeded: 45
   isX: 0
 --- !u!95 &1445354926
 Animator:
@@ -26103,7 +26103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7964185983008170246, guid: 41398da5b0d623a4ca369e192488ca3d, type: 3}
       propertyPath: m_Text
-      value: wasd to move. rmb to select a turret. lmb to place a turret. space to
+      value: wasd to move. lmb to select a turret. rmb to place a turret. space to
         repair turrets.
       objectReference: {fileID: 0}
     - target: {fileID: 7964185983008170246, guid: 41398da5b0d623a4ca369e192488ca3d, type: 3}
@@ -30998,7 +30998,7 @@ MonoBehaviour:
   dmgType: 4
   midDamageScript: {fileID: 1363558377}
   isOnRange: 0
-  healthNeeded: 20
+  healthNeeded: 45
   isX: 0
 --- !u!95 &1893532893
 Animator:

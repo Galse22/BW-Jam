@@ -8,7 +8,14 @@ public class PLus1Music : MonoBehaviour
     void Start()
     {
         musicManager = GameObject.FindWithTag("MusicManagerGO").GetComponent<MusicManager>();
-        Invoke("ChangeDanger", 3.6f);
+        if(musicManager.InstanceFunc())
+        {
+            Invoke("ChangeDanger", 0.25f);
+        }
+        else
+        {
+            Invoke("ChangeDanger", 3.6f);
+        }
     }
 
     void ChangeDanger()

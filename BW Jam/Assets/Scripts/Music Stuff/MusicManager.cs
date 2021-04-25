@@ -13,6 +13,8 @@ public class MusicManager : MonoBehaviour
     public int dangerMeter = 0;
     bool audioResumed;
     bool playerInput;
+
+    bool createdInstance;
     
     private void Update() {
         if (playerInput == false && Input.anyKeyDown)
@@ -55,6 +57,7 @@ public class MusicManager : MonoBehaviour
         yield return new WaitForSeconds(3.01f);
         instance = FMODUnity.RuntimeManager.CreateInstance(music);
         instance.start();
+        createdInstance = true;
     }
 
     
@@ -65,6 +68,18 @@ public class MusicManager : MonoBehaviour
             var result = FMODUnity.RuntimeManager.CoreSystem.mixerSuspend();
             result = FMODUnity.RuntimeManager.CoreSystem.mixerResume();
             audioResumed = true;
+        }
+    }
+
+    public bool InstanceFunc()
+    {
+        if(createdInstance)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
